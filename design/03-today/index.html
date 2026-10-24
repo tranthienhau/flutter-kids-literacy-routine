@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=393, height=852, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Hopscotch - Today</title>
+  <!-- Google Fonts: Sniglet for Hero / Display titles, Varela Round for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&family=Varela+Round&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgMain: '#FCF4F9',
+            surface: '#FFFFFF',
+            surfaceAlt: '#F8E9F2',
+            accent: '#FC69C3',
+            accentFill: '#CA047E',
+            accentPressed: '#C2037A',
+            accentTint: '#FEE3F3',
+            accentTintText: '#8F0459',
+            support: '#B09EFA',
+            supportStrong: '#9880FA',
+            supportTint: '#EEE9FE',
+            supportTintText: '#4B3A9C',
+            textPrimary: '#1F0C18',
+            textSecondary: '#5E4A57',
+            textTertiary: '#7A6673',
+            borderHairline: '#EED9E6',
+            borderControl: '#B682AE',
+            statusSuccess: '#0E7C3A',
+            statusSuccessBg: '#E3F4E9',
+            storiesBg: '#FFEBDD',
+            storiesText: '#8A3F00',
+            soundsBg: '#FEE3F3',
+            soundsText: '#8F0459',
+            readingBg: '#EEE9FE',
+            readingText: '#4B3A9C'
+          },
+          fontFamily: {
+            sniglet: ['Sniglet', 'cursive'],
+            varela: ['Varela Round', 'sans-serif']
+          },
+          boxShadow: {
+            hopscotch: '0 1px 2px rgba(31, 12, 24, 0.04), 0 8px 24px rgba(31, 12, 24, 0.06)',
+            hero: '0 10px 25px -5px rgba(202, 4, 126, 0.3), 0 8px 10px -6px rgba(106, 79, 216, 0.2)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FCF4F9;
+      color: #1F0C18;
+      font-family: 'Varela Round', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #CA047E 0%, #6A4FD8 100%);
+    }
+    /* Hide scrollbars for clean native appearance */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="w-[393px] min-h-[852px] h-[852px] relative mx-auto flex flex-col justify-between overflow-hidden bg-bgMain">
+
+  <!-- TOP APP BAR / HEADER (Clear top safe area: 52px) -->
+  <header class="pt-12 px-5 pb-3 flex items-center justify-between z-10">
+    <div class="flex items-center gap-3">
+      <!-- Child Avatar (Maya) -->
+      <div class="relative w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-[#CA047E] to-[#B09EFA]">
+        <img src="https://lh3.googleusercontent.com/aida/AEtjO1XRbyJId9qINRerAadbCiYziCpZEi5Urnk3vPkkptF4LabHuTz9hcXRx4-0XGlO6b3TtItaTGpuCOW5PXVk7Us2ElPMV0VYuxHN-mNsV9SQf9FEzVlDIIdG-iCdovpru0tXtjpUF5U80dw8UaPy6r2FEwrP58uCP2xXMnYWnQV9YaFC6J-5bDrrv9rCrLDiW0sl95OfFAGbjD_8h-gCOU8GHl2sCj-7n2upKw4eeAl8djAMF3tcp86xtw" alt="Maya" class="w-full h-full rounded-full object-cover border-2 border-white shadow-sm" />
+        <span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-statusSuccess border-2 border-white rounded-full"></span>
+      </div>
+      <div>
+        <span class="text-[12px] font-semibold text-textTertiary tracking-wide uppercase">Reading with</span>
+        <h1 class="text-[20px] leading-tight font-extrabold text-textPrimary font-sniglet">Good evening, Maya</h1>
+      </div>
+    </div>
+
+    <!-- Streak Chip -->
+    <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accentTint border border-[#FAD0EB] shadow-xs">
+      <i data-lucide="flame" class="w-4 h-4 text-accentFill fill-accentFill"></i>
+      <span class="text-[13px] font-bold text-accentTintText">6 days</span>
+    </div>
+  </header>
+
+  <!-- SCROLLABLE MAIN CONTENT AREA -->
+  <main class="flex-1 overflow-y-auto px-5 pb-24 space-y-4 pt-1">
+
+    <!-- FOCAL HERO CARD: Pink-to-Lavender Gradient (#CA047E -> #6A4FD8) -->
+    <section class="hero-gradient rounded-[24px] p-5 text-white shadow-hero relative overflow-hidden">
+      <!-- Subtle decorative watermarks -->
+      <div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+      <div class="absolute -left-6 -top-6 w-24 h-24 rounded-full bg-white/10 blur-lg pointer-events-none"></div>
+
+      <div class="relative z-10 flex items-start justify-between">
+        <div class="flex-1 pr-2">
+          <!-- Translucent Chip on Hero Gradient -->
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/20 backdrop-blur-sm text-white/90 text-[12px] font-medium mb-2 border border-white/15">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#FFCEF3]"></i>
+            <span>Daily Routine</span>
+          </div>
+          <h2 class="text-[25px] font-extrabold font-sniglet tracking-wide leading-tight">Today's routine</h2>
+          <p class="text-[13px] text-white/85 mt-1 font-medium flex items-center gap-1.5">
+            <i data-lucide="clock" class="w-3.5 h-3.5 text-white/70"></i>
+            4 activities &bull; about 12 min
+          </p>
+        </div>
+
+        <!-- Progress Circular Gauge -->
+        <div class="relative w-16 h-16 flex items-center justify-center shrink-0">
+          <svg class="w-16 h-16 transform -rotate-90" viewBox="0 0 64 64">
+            <!-- Background circle -->
+            <circle cx="32" cy="32" r="26" stroke="rgba(255,255,255,0.22)" stroke-width="5" fill="transparent" />
+            <!-- Progress arc (1 of 4 = 25%) -->
+            <circle cx="32" cy="32" r="26" stroke="#FFFFFF" stroke-width="5" fill="transparent" stroke-linecap="round"
+                    stroke-dasharray="163.36" stroke-dashoffset="122.52" />
+          </svg>
+          <div class="absolute flex flex-col items-center justify-center text-center">
+            <span class="text-[14px] font-extrabold leading-none">1<span class="text-[11px] font-medium opacity-80">/4</span></span>
+            <span class="text-[9px] font-semibold uppercase tracking-wider opacity-80 mt-0.5">done</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Footer inside Hero -->
+      <div class="mt-4 pt-3 border-t border-white/15 flex items-center justify-between">
+        <span class="text-[13px] text-white/90 font-medium">Up next: Short a sounds</span>
+        <button class="h-10 px-5 rounded-full bg-white text-accentFill font-bold text-[14px] shadow-md flex items-center gap-1.5 hover:bg-white/95 active:scale-95 transition-all">
+          <span>Continue</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-accentFill"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION TITLE -->
+    <div class="flex items-center justify-between pt-1">
+      <h3 class="text-[18px] font-bold text-textPrimary font-sniglet">Maya's activities</h3>
+      <span class="text-[12px] font-semibold text-textTertiary">Step 2 of 4</span>
+    </div>
+
+    <!-- LIST OF 4 ACTIVITY CARDS -->
+    <div class="space-y-3">
+
+      <!-- ACTIVITY 1: Done -->
+      <div class="bg-surface rounded-[24px] p-3.5 shadow-hopscotch border border-borderHairline flex items-center gap-3.5 opacity-90 transition-all hover:shadow-md">
+        <!-- Thumbnail -->
+        <div class="relative w-16 h-16 rounded-[16px] overflow-hidden shrink-0 bg-surfaceAlt">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOjNA7sm428t3NrhjpBKVpKJUDDOKpLcNcs5gWwFo3xIZG5X29JaAPOlGJkdO-vPGaYqcUeR7G2T8xdJCMxhbQOHt_HPeCAI0sJdxs6xS0F_4rcGATItAcQpYWbARI5uI4lVRmHdgqRSItLEBkrf0sQTXbdJij5s9QyH7U4L8TgmxBxLAPMafHIJc452yWEpLPSnTnHIho_Fu45vTt6dbIS9oCxEAClpEoci4pb4Vv-W-DpJ6i8G7YUO47r_XBrB8xzGPh4cCZZg" alt="Letter sound: short a" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-statusSuccess/20 flex items-center justify-center">
+            <div class="w-6 h-6 rounded-full bg-statusSuccess flex items-center justify-center text-white shadow-xs">
+              <i data-lucide="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Details -->
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded-full bg-soundsBg text-soundsText text-[12px] font-semibold">Sounds</span>
+            <span class="text-[12px] text-textTertiary font-medium flex items-center gap-1">
+              <i data-lucide="clock" class="w-3 h-3 text-textTertiary"></i> 3 min
+            </span>
+          </div>
+          <h4 class="text-[15px] font-bold text-textPrimary truncate leading-snug">1. Letter sound: short a</h4>
+          <p class="text-[12px] text-statusSuccess font-medium mt-0.5 flex items-center gap-1">
+            <i data-lucide="check-circle-2" class="w-3 h-3"></i> Completed today
+          </p>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-statusSuccessBg flex items-center justify-center text-statusSuccess shrink-0">
+          <i data-lucide="check" class="w-4 h-4 stroke-[2.5]"></i>
+        </div>
+      </div>
+
+      <!-- ACTIVITY 2: Next (Active Highlighted) -->
+      <div class="bg-surface rounded-[24px] p-3.5 shadow-hopscotch border-2 border-accentFill ring-4 ring-accentTint/60 flex items-center gap-3.5 transition-all">
+        <!-- Thumbnail -->
+        <div class="relative w-16 h-16 rounded-[16px] overflow-hidden shrink-0 bg-surfaceAlt">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOjNA7sm428t3NrhjpBKVpKJUDDOKpLcNcs5gWwFo3xIZG5X29JaAPOlGJkdO-vPGaYqcUeR7G2T8xdJCMxhbQOHt_HPeCAI0sJdxs6xS0F_4rcGATItAcQpYWbARI5uI4lVRmHdgqRSItLEBkrf0sQTXbdJij5s9QyH7U4L8TgmxBxLAPMafHIJc452yWEpLPSnTnHIho_Fu45vTt6dbIS9oCxEAClpEoci4pb4Vv-W-DpJ6i8G7YUO47r_XBrB8xzGPh4cCZZg" alt="Tap the words: The cat sat" class="w-full h-full object-cover" />
+          <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-md bg-black/60 text-white text-[10px] font-bold">
+            PLAY
+          </div>
+        </div>
+        <!-- Details -->
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded-full bg-soundsBg text-soundsText text-[12px] font-semibold">Sounds</span>
+            <span class="text-[12px] text-textTertiary font-medium flex items-center gap-1">
+              <i data-lucide="clock" class="w-3 h-3 text-textTertiary"></i> 3 min
+            </span>
+            <span class="px-2 py-0.5 rounded-full bg-accentFill text-white text-[11px] font-bold uppercase tracking-wider">Next</span>
+          </div>
+          <h4 class="text-[15px] font-bold text-textPrimary truncate leading-snug">2. Tap the words: The cat sat</h4>
+          <p class="text-[12px] text-textSecondary font-medium mt-0.5">Phonics tap &amp; sound out</p>
+        </div>
+        <!-- Start CTA button -->
+        <button class="w-10 h-10 rounded-full bg-accentFill text-white flex items-center justify-center shadow-md shrink-0 active:scale-90 transition-transform">
+          <i data-lucide="play" class="w-4 h-4 fill-white translate-x-0.5"></i>
+        </button>
+      </div>
+
+      <!-- ACTIVITY 3: Up Next -->
+      <div class="bg-surface rounded-[24px] p-3.5 shadow-hopscotch border border-borderHairline flex items-center gap-3.5 transition-all hover:shadow-md">
+        <!-- Thumbnail -->
+        <div class="relative w-16 h-16 rounded-[16px] overflow-hidden shrink-0 bg-surfaceAlt">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhsh52jOReuAzvKk904A6ccH_YJJJlcQ0C2ewxKE2I-rBdJE6Pc-Ppm6-9kz5JCUV2Wkm8NSOQNo9QGwCMnZL_TOf4nEYg2LkaFEZMjZQYgxrfwmdbKWRa7PJ5vu5SzA8QqHFkIeWjZrfUSeaGArh3nTNB5hStYR7Xd9oZ6pfoq1jJog23eAE4IufBuUZOTEYJ5E7nYmHapXcK6pRxwbsOjH6QtGGr6MXcQ-2_jOIYGI2jbcEYaObNCNffW8m6TzH56ux0-NZ9Ag" alt="Read along: A Map for Sam" class="w-full h-full object-cover" />
+        </div>
+        <!-- Details -->
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded-full bg-readingBg text-readingText text-[12px] font-semibold">Reading</span>
+            <span class="text-[12px] text-textTertiary font-medium flex items-center gap-1">
+              <i data-lucide="clock" class="w-3 h-3 text-textTertiary"></i> 4 min
+            </span>
+          </div>
+          <h4 class="text-[15px] font-bold text-textPrimary truncate leading-snug">3. Read along: A Map for Sam</h4>
+          <p class="text-[12px] text-textSecondary font-medium mt-0.5">Side-by-side read together</p>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-surfaceAlt flex items-center justify-center text-textTertiary shrink-0">
+          <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2]"></i>
+        </div>
+      </div>
+
+      <!-- ACTIVITY 4: Story Time -->
+      <div class="bg-surface rounded-[24px] p-3.5 shadow-hopscotch border border-borderHairline flex items-center gap-3.5 transition-all hover:shadow-md">
+        <!-- Thumbnail (Story illustration) -->
+        <div class="relative w-16 h-16 rounded-[16px] overflow-hidden shrink-0 bg-[#FFEBDD]/40">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXnD9UhZEFlXvG9bhUGo5ktf1SqlwI-zufZ7k8N1Jz7C1g_Tj0qgdf-likxp72wiwNZXK2Ou56u3IDrsYr7F48NB_WVMMmoExtSnocJi1xyVGCtyqUZL321h1AJ8QIltjuyBCz4e0dXm2Naaod-bPUa9fAV_dgWFomSREosa4SjXdopl7KXfgkLqt8l-yzrpQU9orwCzC8UH02oa5Me_tW6rg3mKt4-w-L5ycJzi63vcHTG3c-aW-9d5e7CeZ4fVeVrO1NqMAE5Q" alt="Story time: Pip Finds a Hat" class="w-full h-full object-cover" />
+        </div>
+        <!-- Details -->
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded-full bg-storiesBg text-storiesText text-[12px] font-semibold">Stories</span>
+            <span class="text-[12px] text-textTertiary font-medium flex items-center gap-1">
+              <i data-lucide="clock" class="w-3 h-3 text-textTertiary"></i> 5 min
+            </span>
+          </div>
+          <h4 class="text-[15px] font-bold text-textPrimary truncate leading-snug">4. Story time: Pip Finds a Hat</h4>
+          <p class="text-[12px] text-textSecondary font-medium mt-0.5">Gentle wind-down bedtime tale</p>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-surfaceAlt flex items-center justify-center text-textTertiary shrink-0">
+          <i data-lucide="chevron-right" class="w-4 h-4 stroke-[2]"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PARENT PROMPT CARD -->
+    <!-- Design System Spec: #EEE9FE fill, 24px radius, small "Parent" label in #4B3A9C, body #1F0C18 -->
+    <div class="bg-supportTint rounded-[24px] p-4 border border-[#DDD4FE] flex items-start gap-3.5 shadow-xs">
+      <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-supportTintText shrink-0 shadow-xs mt-0.5">
+        <i data-lucide="lightbulb" class="w-4 h-4 stroke-[2.2]"></i>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-[12px] font-bold uppercase tracking-wider text-supportTintText">Parent Tip &bull; Jenna</span>
+        </div>
+        <p class="text-[14px] text-textPrimary leading-snug font-medium">
+          Tip: let Maya tap first, then repeat the sound together.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- BOTTOM TAB BAR (Fixed docked, hairline border #EED9E6, safe bottom ~34px inset) -->
+  <!-- Strict Order: Today (sun), Library (book-open), Progress (trophy), Profile (user-round) -->
+  <nav class="fixed bottom-0 left-0 right-0 w-[393px] mx-auto bg-surface border-t border-borderHairline pb-7 pt-2.5 px-6 flex items-center justify-between z-50">
+    
+    <!-- Tab 1: Today (ACTIVE) -->
+    <a href="#" class="flex flex-col items-center gap-1 focus:outline-hidden group">
+      <div class="px-4 py-1 rounded-full bg-accentTint flex items-center justify-center transition-colors">
+        <i data-lucide="sun" class="w-5 h-5 text-accentFill stroke-[2.2]"></i>
+      </div>
+      <span class="text-[12px] font-bold text-accentFill tracking-tight font-varela">Today</span>
+    </a>
+
+    <!-- Tab 2: Library (Inactive) -->
+    <a href="#" class="flex flex-col items-center gap-1 focus:outline-hidden group">
+      <div class="px-4 py-1 rounded-full flex items-center justify-center transition-colors">
+        <i data-lucide="book-open" class="w-5 h-5 text-textSecondary stroke-[1.8] group-hover:text-textPrimary"></i>
+      </div>
+      <span class="text-[12px] font-medium text-textSecondary tracking-tight font-varela group-hover:text-textPrimary">Library</span>
+    </a>
+
+    <!-- Tab 3: Progress (Inactive) -->
+    <a href="#" class="flex flex-col items-center gap-1 focus:outline-hidden group">
+      <div class="px-4 py-1 rounded-full flex items-center justify-center transition-colors">
+        <i data-lucide="trophy" class="w-5 h-5 text-textSecondary stroke-[1.8] group-hover:text-textPrimary"></i>
+      </div>
+      <span class="text-[12px] font-medium text-textSecondary tracking-tight font-varela group-hover:text-textPrimary">Progress</span>
+    </a>
+
+    <!-- Tab 4: Profile (Inactive) -->
+    <a href="#" class="flex flex-col items-center gap-1 focus:outline-hidden group">
+      <div class="px-4 py-1 rounded-full flex items-center justify-center transition-colors">
+        <i data-lucide="user-round" class="w-5 h-5 text-textSecondary stroke-[1.8] group-hover:text-textPrimary"></i>
+      </div>
+      <span class="text-[12px] font-medium text-textSecondary tracking-tight font-varela group-hover:text-textPrimary">Profile</span>
+    </a>
+
+  </nav>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pip Finds a Hat - Hopscotch</title>
+<!-- Google Fonts: Sniglet (Display/Headline) & Varela Round (UI/Body) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#fff8f8",
+            "surface-variant": "#f6dce4",
+            "tertiary-fixed-dim": "#7cdd61",
+            "secondary-fixed-dim": "#cbbeff",
+            "on-primary-fixed": "#3d0023",
+            "surface-dim": "#eed3db",
+            "cat-sounds-text": "#8F0459",
+            "on-primary-fixed-variant": "#8c0056",
+            "on-tertiary-fixed-variant": "#0d5300",
+            "primary-fixed": "#ffd9e5",
+            "on-secondary": "#ffffff",
+            "cat-sounds-bg": "#FEE3F3",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#a9ff8d",
+            "surface-tint": "#b70071",
+            "background": "#FCF4F9",
+            "warning-bg": "#FAEFE1",
+            "on-error": "#ffffff",
+            "surface-alt": "#F8E9F2",
+            "error": "#ba1a1a",
+            "cat-stories-bg": "#FFEBDD",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#ffb0cf",
+            "tertiary": "#105e00",
+            "accent": "#FC69C3",
+            "inverse-primary": "#ffb0cf",
+            "cat-rhymes-text": "#166534",
+            "cat-reading-bg": "#EEE9FE",
+            "surface-container": "#ffe8ee",
+            "primary-container": "#ca047e",
+            "outline-variant": "#e0bec9",
+            "danger-bg": "#FBE5E5",
+            "warning-text": "#A75906",
+            "error-container": "#ffdad6",
+            "border-control": "#B682AE",
+            "accent-tint-text": "#8F0459",
+            "primary": "#9f0062",
+            "cat-rhymes-bg": "#DDF5EA",
+            "cat-stories-text": "#8A3F00",
+            "on-primary-container": "#ffe3eb",
+            "support-strong": "#9880FA",
+            "accent-pressed": "#C2037A",
+            "secondary": "#6251a7",
+            "surface-container-high": "#fce1e9",
+            "accent-tint": "#FEE3F3",
+            "text-primary": "#1F0C18",
+            "on-surface-variant": "#584049",
+            "on-secondary-container": "#453387",
+            "success-bg": "#E3F4E9",
+            "secondary-fixed": "#e7deff",
+            "on-tertiary-fixed": "#022100",
+            "tertiary-fixed": "#97fa7a",
+            "border-hairline": "#EED9E6",
+            "inverse-surface": "#3c2c32",
+            "outline": "#8c6f79",
+            "tertiary-container": "#177a00",
+            "surface": "#FFFFFF",
+            "text-tertiary": "#7A6673",
+            "on-surface": "#26171d",
+            "success-text": "#0E7C3A",
+            "surface-container-highest": "#f6dce4",
+            "support-tint-text": "#4B3A9C",
+            "secondary-container": "#b3a1fd",
+            "text-secondary": "#5E4A57",
+            "support-tint": "#EEE9FE",
+            "on-background": "#26171d",
+            "surface-container-low": "#fff0f3",
+            "inverse-on-surface": "#ffecf1",
+            "on-secondary-fixed": "#1e0061",
+            "on-secondary-fixed-variant": "#4a388d",
+            "cat-reading-text": "#4B3A9C",
+            "on-primary": "#ffffff",
+            "danger-text": "#CE2020"
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-lg": "1rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-xl": "1.5rem",
+            "margin": "1.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "0.75rem",
+            "space-2xl": "2rem"
+          },
+          fontFamily: {
+            "label": ["Varela Round"],
+            "headline-hero": ["Sniglet"],
+            "title-lg": ["Varela Round"],
+            "caption": ["Varela Round"],
+            "reading-child": ["Varela Round"],
+            "body": ["Varela Round"]
+          },
+          fontSize: {
+            "label": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+            "headline-hero": ["32px", { lineHeight: "40px", fontWeight: "700" }],
+            "title-lg": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "caption": ["13px", { lineHeight: "18px", fontWeight: "500" }],
+            "reading-child": ["28px", { lineHeight: "1.4", fontWeight: "400" }],
+            "body": ["16px", { lineHeight: "24px", fontWeight: "400" }]
+          },
+          boxShadow: {
+            "soft-card": "0 1px 2px rgba(31,12,24,.04), 0 8px 24px rgba(31,12,24,.06)",
+            "soft-float": "0 4px 16px rgba(31,12,24,.08)",
+            "cta-lift": "0 8px 20px rgba(202,4,126,.24)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbar for horizontal chips list */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center selection:bg-accent-tint selection:text-cat-sounds-text">
+<!-- Mobile Device Shell Frame (393px × 852px) -->
+<div class="relative w-full max-w-[393px] min-h-screen bg-background flex flex-col justify-between shadow-2xl border-x border-border-hairline overflow-x-hidden">
+<!-- Top App Bar / Header -->
+<header class="fixed top-0 left-0 max-w-[393px] w-full z-50 flex justify-between items-center px-margin pt-10 pb-3 bg-background/90 backdrop-blur-md">
+<!-- Back Button -->
+<button aria-label="Back" class="w-11 h-11 rounded-full bg-surface shadow-soft-card border border-border-hairline flex items-center justify-center text-text-primary active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]">chevron_left</span>
+</button>
+<!-- Center Brand / Context Label -->
+<span class="font-headline-hero text-title-lg text-primary tracking-normal">Hopscotch</span>
+<!-- Trailing Action: Favorite / Bookmark -->
+<button aria-label="Add to favorites" class="w-11 h-11 rounded-full bg-surface shadow-soft-card border border-border-hairline flex items-center justify-center text-primary-container active:scale-90 transition-all duration-150" id="fav-btn" onclick="toggleFavorite()" type="button">
+<span class="material-symbols-outlined text-[22px]" id="fav-icon">favorite</span>
+</button>
+</header>
+<!-- Main Scrollable Story Canvas -->
+<main class="flex-1 w-full pt-24 pb-48 px-margin flex flex-col gap-5 overflow-y-auto">
+<!-- Hero Story Cover Card -->
+<section class="relative w-full rounded-[24px] overflow-hidden bg-surface shadow-soft-card border border-border-hairline group">
+<div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-alt">
+<img alt="Pip Finds a Hat cover illustration" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1XNF0L1Cj0SFyq03YsNZq_t2JKtuHE3Aj4cxFrVtAjqgpf1yX5qamlmi16Hz-hgpLm7qWXjEAdoKLdye3vRPMjmKHQHUSumwXmizKY6xSRKFKG6lwajm7ZexdIy8TwqwV1f0hWR7jOplK9omdlSsbpv9BEQv7N7qXtPsEooIBgvLQesxdjhhb9SUU1sE1gTW77u7q72InZwu67ZrEvdNC9LcH6Sh46aonFt1bPYXhZL6UITt5M5KyHs"/>
+</div>
+</section>
+<!-- Title & Metadata Badges -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h1 class="font-headline-hero text-headline-hero text-text-primary tracking-wide leading-tight">
+            Pip Finds a Hat
+          </h1>
+</div>
+<!-- Meta Pills Row -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+<!-- Category Chip -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cat-stories-bg text-cat-stories-text font-label text-caption shrink-0">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Stories</span>
+</div>
+<!-- Level Chip -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cat-sounds-bg text-accent-tint-text font-label text-caption shrink-0">
+<span class="material-symbols-outlined text-[16px]">auto_stories</span>
+<span>Level 1</span>
+</div>
+<!-- Pages Chip -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border-hairline text-text-secondary font-label text-caption shrink-0">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>8 pages</span>
+</div>
+<!-- Duration Chip -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border-hairline text-text-secondary font-label text-caption shrink-0">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>5 min</span>
+</div>
+</div>
+</section>
+<!-- Story Description -->
+<section class="bg-surface rounded-[24px] p-4 border border-border-hairline shadow-soft-card">
+<p class="font-body text-body text-text-secondary leading-relaxed">
+          A curious puppy finds a little red hat. Practice short <span class="font-semibold text-text-primary">a</span> and <span class="font-semibold text-text-primary">i</span> words together.
+        </p>
+</section>
+<!-- Phonics Focus Section ('Words to listen for') -->
+<section class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-cat-sounds-bg text-cat-sounds-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">hearing</span>
+</span>
+<h2 class="font-title-lg text-title-lg text-text-primary">
+              Words to listen for
+            </h2>
+</div>
+</div>
+<p class="font-caption text-caption text-text-tertiary pl-9">
+          Tap a word to practice the sound together
+        </p>
+<!-- Highlighted Tappable Words -->
+<div class="grid grid-cols-4 gap-2.5 pt-1">
+<!-- Word 1: hat -->
+<button class="flex flex-col items-center justify-center py-2.5 px-2 rounded-2xl bg-cat-sounds-bg border border-accent-tint active:scale-95 transition-all duration-150 group" onclick="playWordFeedback(this, 'hat')" type="button">
+<span class="font-label text-[17px] font-bold text-cat-sounds-text group-hover:scale-105 transition-transform">hat</span>
+<span class="material-symbols-outlined text-[16px] text-cat-sounds-text mt-0.5 opacity-80 group-hover:opacity-100">volume_up</span>
+</button>
+<!-- Word 2: big -->
+<button class="flex flex-col items-center justify-center py-2.5 px-2 rounded-2xl bg-cat-sounds-bg border border-accent-tint active:scale-95 transition-all duration-150 group" onclick="playWordFeedback(this, 'big')" type="button">
+<span class="font-label text-[17px] font-bold text-cat-sounds-text group-hover:scale-105 transition-transform">big</span>
+<span class="material-symbols-outlined text-[16px] text-cat-sounds-text mt-0.5 opacity-80 group-hover:opacity-100">volume_up</span>
+</button>
+<!-- Word 3: sit -->
+<button class="flex flex-col items-center justify-center py-2.5 px-2 rounded-2xl bg-cat-sounds-bg border border-accent-tint active:scale-95 transition-all duration-150 group" onclick="playWordFeedback(this, 'sit')" type="button">
+<span class="font-label text-[17px] font-bold text-cat-sounds-text group-hover:scale-105 transition-transform">sit</span>
+<span class="material-symbols-outlined text-[16px] text-cat-sounds-text mt-0.5 opacity-80 group-hover:opacity-100">volume_up</span>
+</button>
+<!-- Word 4: red -->
+<button class="flex flex-col items-center justify-center py-2.5 px-2 rounded-2xl bg-cat-sounds-bg border border-accent-tint active:scale-95 transition-all duration-150 group" onclick="playWordFeedback(this, 'red')" type="button">
+<span class="font-label text-[17px] font-bold text-cat-sounds-text group-hover:scale-105 transition-transform">red</span>
+<span class="material-symbols-outlined text-[16px] text-cat-sounds-text mt-0.5 opacity-80 group-hover:opacity-100">volume_up</span>
+</button>
+</div>
+</section>
+<!-- Parent Coaching Section ('Before you read') -->
+<section class="rounded-[24px] bg-support-tint border border-border-hairline p-5 shadow-soft-card flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-white text-support-tint-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">psychology</span>
+</span>
+<span class="font-label text-[12px] font-bold tracking-wider text-support-tint-text uppercase">Parent Tip</span>
+</div>
+<div class="space-y-1.5">
+<p class="font-title-lg text-[16px] text-text-primary leading-snug">
+            “Ask Maya what she thinks Pip will find.”
+          </p>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+            Building curiosity before opening the book helps active listening and comprehension.
+          </p>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom CTA Section -->
+<aside class="fixed bottom-0 left-0 max-w-[393px] w-full z-40 bg-gradient-to-t from-background via-background/95 to-background/0 pt-6 px-margin pb-9 flex flex-col gap-2.5">
+<!-- Primary Action: Start reading -->
+<button class="w-full h-14 rounded-full bg-primary-container text-white font-label text-[17px] font-bold flex items-center justify-center gap-2 shadow-cta-lift active:bg-accent-pressed active:scale-[0.98] transition-all duration-150" type="button">
+<span>Start reading</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Secondary Action: Listen first -->
+<button class="w-full h-12 rounded-full bg-white border-[1.5px] border-border-control text-text-primary font-label text-[15px] font-semibold flex items-center justify-center gap-2 shadow-sm active:bg-surface-alt active:scale-[0.98] transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[19px] text-support-tint-text">headphones</span>
+<span>Listen first</span>
+</button>
+</aside>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    function toggleFavorite() {
+      const icon = document.getElementById('fav-icon');
+      if (icon.classList.contains('fill-icon')) {
+        icon.classList.remove('fill-icon');
+        icon.style.fontVariationSettings = "'FILL' 0";
+      } else {
+        icon.classList.add('fill-icon');
+        icon.style.fontVariationSettings = "'FILL' 1";
+      }
+    }
+
+    function playWordFeedback(element, word) {
+      // Subtle pulse animation
+      element.classList.add('ring-2', 'ring-primary-container');
+      setTimeout(() => {
+        element.classList.remove('ring-2', 'ring-primary-container');
+      }, 400);
+
+      // Web Speech API for playful pronunciation if supported
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.rate = 0.85; // slower, gentle phonics pace for child
+        utterance.pitch = 1.1;
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+  </script>
+</body></html>

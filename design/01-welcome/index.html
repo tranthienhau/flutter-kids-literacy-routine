@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Hopscotch - Welcome</title>
+<!-- Google Fonts: Sniglet & Varela Round -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#fff0f3",
+            "border-hairline": "#EED9E6",
+            "border-control": "#B682AE",
+            "text-tertiary": "#7A6673",
+            "inverse-surface": "#3c2c32",
+            "on-tertiary-fixed": "#022100",
+            "on-secondary-container": "#453387",
+            "secondary-container": "#b3a1fd",
+            "tertiary": "#105e00",
+            "on-background": "#26171d",
+            "danger-bg": "#FBE5E5",
+            "secondary-fixed-dim": "#cbbeff",
+            "success-bg": "#E3F4E9",
+            "warning-text": "#A75906",
+            "danger-text": "#CE2020",
+            "error": "#ba1a1a",
+            "accent-pressed": "#C2037A",
+            "surface-variant": "#f6dce4",
+            "cat-stories-text": "#8A3F00",
+            "on-error": "#ffffff",
+            "surface-alt": "#F8E9F2",
+            "secondary": "#6251a7",
+            "inverse-on-surface": "#ffecf1",
+            "cat-rhymes-bg": "#DDF5EA",
+            "primary-fixed": "#ffd9e5",
+            "primary": "#9f0062",
+            "on-tertiary-fixed-variant": "#0d5300",
+            "on-primary-container": "#ffe3eb",
+            "inverse-primary": "#ffb0cf",
+            "on-primary-fixed": "#3d0023",
+            "accent-tint-text": "#8F0459",
+            "cat-stories-bg": "#FFEBDD",
+            "surface-bright": "#fff8f8",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#f6dce4",
+            "cat-reading-text": "#4B3A9C",
+            "cat-sounds-bg": "#FEE3F3",
+            "success-text": "#0E7C3A",
+            "secondary-fixed": "#e7deff",
+            "background": "#FCF4F9",
+            "accent-tint": "#FEE3F3",
+            "on-primary-fixed-variant": "#8c0056",
+            "warning-bg": "#FAEFE1",
+            "on-secondary-fixed-variant": "#4a388d",
+            "accent": "#FC69C3",
+            "cat-rhymes-text": "#166534",
+            "on-secondary": "#ffffff",
+            "surface-container": "#ffe8ee",
+            "on-secondary-fixed": "#1e0061",
+            "tertiary-fixed-dim": "#7cdd61",
+            "text-secondary": "#5E4A57",
+            "outline": "#8c6f79",
+            "primary-container": "#ca047e",
+            "surface-container-high": "#fce1e9",
+            "support-strong": "#9880FA",
+            "surface-dim": "#eed3db",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#97fa7a",
+            "support-tint": "#EEE9FE",
+            "text-primary": "#1F0C18",
+            "surface": "#FFFFFF",
+            "support-tint-text": "#4B3A9C",
+            "on-tertiary-container": "#a9ff8d",
+            "cat-sounds-text": "#8F0459",
+            "primary-fixed-dim": "#ffb0cf",
+            "outline-variant": "#e0bec9",
+            "on-surface-variant": "#584049",
+            "tertiary-container": "#177a00",
+            "on-surface": "#26171d",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "cat-reading-bg": "#EEE9FE",
+            "surface-tint": "#b70071"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "0.75rem",
+            "space-2xl": "2rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-xl": "1.5rem",
+            "space-lg": "1rem",
+            "margin": "1.25rem"
+          },
+          "fontFamily": {
+            "label": ["Varela Round"],
+            "caption": ["Varela Round"],
+            "reading-child": ["Varela Round"],
+            "headline-hero": ["Sniglet"],
+            "title-lg": ["Varela Round"],
+            "body": ["Varela Round"]
+          },
+          "fontSize": {
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "reading-child": ["28px", { "lineHeight": "1.4", "fontWeight": "400" }],
+            "headline-hero": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: #FCF4F9;
+      color: #1F0C18;
+      font-family: 'Varela Round', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .card-shadow-soft {
+      box-shadow: 0 1px 2px rgba(31, 12, 24, 0.04), 0 8px 24px rgba(31, 12, 24, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-background min-h-screen flex justify-center items-center antialiased selection:bg-accent-tint selection:text-accent-tint-text">
+<!-- Mobile Screen Frame (393px width constraint) -->
+<main class="w-full max-w-[393px] min-h-[852px] h-[852px] bg-background relative flex flex-col justify-between overflow-hidden shadow-2xl md:rounded-[48px] md:border-[8px] md:border-border-hairline">
+<!-- TopAppBar Shared Component Blueprint Execution -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-space-lg pt-safe h-14 bg-transparent dark:bg-transparent">
+<!-- Leading Icon / Cancel Action -->
+<button aria-label="Close" class="w-12 h-12 flex items-center justify-center rounded-full text-text-secondary hover:opacity-80 transition-opacity duration-200 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<!-- Brand Logo / Headline -->
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-hero text-title-lg text-primary-container tracking-normal">Hopscotch</span>
+</div>
+<!-- Trailing Action Text -->
+<button class="h-12 px-space-sm flex items-center justify-center font-label text-label text-text-secondary hover:opacity-80 transition-opacity duration-200 active:scale-95 transition-transform" type="button">
+        Skip
+      </button>
+</header>
+<!-- Top Hero Section (~55% of height) -->
+<section class="relative w-full h-[54%] pt-14 px-5 pb-2 flex flex-col items-center justify-end z-10">
+<!-- Monogram Floating Badge (Brand Identity Element) -->
+<div class="absolute top-[68px] left-6 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-accent-tint card-shadow-soft border border-border-hairline">
+<span class="font-headline-hero text-[26px] text-primary-container leading-none select-none">H</span>
+</div>
+<!-- Lifestyle Hero Visual Container -->
+<div class="relative w-full h-full rounded-[32px] overflow-hidden card-shadow-soft border border-border-hairline bg-surface">
+<img alt="Hopscotch parent and child daily reading interaction" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAELE8BHM1LZaBtAgbs7g9OcMuFj2YSPFvrQZEhkVyaOQd8VfeKtDJnMtuh-waATCJD7HguxWmRHfyqVOFBnVixj4UFCLhg2adFK2BfKRNpQnm0uOT2_Pf3UYB8oiU38WU0vwXPGVoL41ypIONPBAAuOJuU0r-DCOxBykiTJiLAeWTCBnQypNA0bGDXvobZqgabVtttC_mwETJGHtODxKZcT3nmkSd6WqgA2ERRygpxIhm98xjGRhO4HTE_yQIPZg-RZsy6e5km4A"/>
+<!-- Gentle bottom gradient bleeding into screen background -->
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none"></div>
+</div>
+</section>
+<!-- Bottom Content & Action Area (~45% of height) -->
+<section class="relative w-full flex-1 px-margin pb-9 pt-3 flex flex-col justify-between z-20">
+<!-- Content Copy Cluster -->
+<div class="flex flex-col items-center text-center px-1">
+<!-- Display Heading -->
+<h1 class="font-headline-hero text-headline-hero text-text-primary mb-3">
+          Five minutes a day, reading together
+        </h1>
+<!-- Body Description -->
+<p class="font-body text-body text-text-secondary max-w-[320px]">
+          Short, playful activities you and your child do side by side. No screen time alone.
+        </p>
+<!-- Page Indicator Dots (1 of 3 Active) -->
+<div aria-label="Page 1 of 3" class="flex items-center justify-center gap-2 mt-5">
+<!-- Active Dot: Elongated pill in #CA047E -->
+<div class="w-6 h-2 rounded-full bg-primary-container transition-all duration-300"></div>
+<!-- Inactive Dot 2 -->
+<div class="w-2 h-2 rounded-full bg-border-hairline"></div>
+<!-- Inactive Dot 3 -->
+<div class="w-2 h-2 rounded-full bg-border-hairline"></div>
+</div>
+</div>
+<!-- Interactive Actions Area -->
+<div class="w-full flex flex-col gap-2 mt-auto">
+<!-- Primary Action CTA -->
+<button class="w-full h-14 bg-primary-container hover:bg-accent-pressed active:scale-[0.98] transition-all duration-150 rounded-full flex items-center justify-center shadow-md shadow-primary-container/20 group focus:outline-none focus:ring-2 focus:ring-primary-container focus:ring-offset-2" type="button">
+<span class="font-label text-[16px] leading-[24px] font-semibold text-on-primary">
+            Get started
+          </span>
+</button>
+<!-- Secondary Action CTA -->
+<button class="w-full min-h-[48px] py-2 flex items-center justify-center rounded-full hover:bg-accent-tint/40 active:scale-[0.98] transition-all duration-150 focus:outline-none" type="button">
+<span class="font-label text-label text-text-primary font-medium hover:text-primary-container transition-colors">
+            I already have an account
+          </span>
+</button>
+</div>
+</section>
+</main>
+</body></html>

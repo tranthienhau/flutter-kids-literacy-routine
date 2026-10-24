@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hopscotch - Activity Complete</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-alt": "#F8E9F2",
+            "support-tint": "#EEE9FE",
+            "success-bg": "#E3F4E9",
+            "on-secondary-fixed-variant": "#4a388d",
+            "surface-variant": "#f6dce4",
+            "accent-tint": "#FEE3F3",
+            "on-background": "#26171d",
+            "cat-sounds-text": "#8F0459",
+            "on-tertiary": "#ffffff",
+            "outline-variant": "#e0bec9",
+            "primary-fixed": "#ffd9e5",
+            "primary-container": "#ca047e",
+            "on-surface-variant": "#584049",
+            "primary": "#9f0062",
+            "support-strong": "#9880FA",
+            "error": "#ba1a1a",
+            "secondary-fixed-dim": "#cbbeff",
+            "on-primary-fixed-variant": "#8c0056",
+            "surface-container-highest": "#f6dce4",
+            "danger-text": "#CE2020",
+            "surface-dim": "#eed3db",
+            "surface-tint": "#b70071",
+            "surface-container-lowest": "#ffffff",
+            "border-hairline": "#EED9E6",
+            "primary-fixed-dim": "#ffb0cf",
+            "background": "#FCF4F9",
+            "on-primary-fixed": "#3d0023",
+            "on-secondary-fixed": "#1e0061",
+            "warning-text": "#A75906",
+            "surface-container-high": "#fce1e9",
+            "on-tertiary-fixed": "#022100",
+            "inverse-surface": "#3c2c32",
+            "accent-pressed": "#C2037A",
+            "warning-bg": "#FAEFE1",
+            "cat-rhymes-text": "#166534",
+            "inverse-on-surface": "#ffecf1",
+            "on-error-container": "#93000a",
+            "danger-bg": "#FBE5E5",
+            "cat-reading-bg": "#EEE9FE",
+            "secondary-fixed": "#e7deff",
+            "surface": "#FFFFFF",
+            "on-tertiary-fixed-variant": "#0d5300",
+            "success-text": "#0E7C3A",
+            "surface-container": "#ffe8ee",
+            "on-tertiary-container": "#a9ff8d",
+            "surface-container-low": "#fff0f3",
+            "accent": "#FC69C3",
+            "tertiary-fixed": "#97fa7a",
+            "border-control": "#B682AE",
+            "text-tertiary": "#7A6673",
+            "cat-reading-text": "#4B3A9C",
+            "surface-bright": "#fff8f8",
+            "cat-rhymes-bg": "#DDF5EA",
+            "outline": "#8c6f79",
+            "cat-stories-text": "#8A3F00",
+            "tertiary-fixed-dim": "#7cdd61",
+            "on-error": "#ffffff",
+            "text-secondary": "#5E4A57",
+            "on-secondary": "#ffffff",
+            "accent-tint-text": "#8F0459",
+            "on-secondary-container": "#453387",
+            "error-container": "#ffdad6",
+            "secondary": "#6251a7",
+            "on-primary-container": "#ffe3eb",
+            "support-tint-text": "#4B3A9C",
+            "tertiary": "#105e00",
+            "on-primary": "#ffffff",
+            "text-primary": "#1F0C18",
+            "secondary-container": "#b3a1fd",
+            "on-surface": "#26171d",
+            "cat-stories-bg": "#FFEBDD",
+            "tertiary-container": "#177a00",
+            "inverse-primary": "#ffb0cf",
+            "cat-sounds-bg": "#FEE3F3"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-2xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1rem",
+            "space-md": "0.75rem",
+            "space-xl": "1.5rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "1.25rem"
+          },
+          "fontFamily": {
+            "headline-hero": ["Sniglet"],
+            "title-lg": ["Varela Round"],
+            "label": ["Varela Round"],
+            "caption": ["Varela Round"],
+            "body": ["Varela Round"],
+            "reading-child": ["Varela Round"]
+          },
+          "fontSize": {
+            "headline-hero": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reading-child": ["28px", { "lineHeight": "1.4", "fontWeight": "400" }]
+          },
+          "boxShadow": {
+            "card-soft": "0 1px 2px rgba(31,12,24,.04), 0 8px 24px rgba(31,12,24,.06)"
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center items-center selection:bg-accent-tint selection:text-cat-sounds-text">
+<!-- iPhone Frame Container (393 x 852 px simulation) -->
+<div class="relative w-full max-w-[393px] min-h-[852px] h-full bg-gradient-to-b from-accent-tint via-background to-support-tint flex flex-col justify-between overflow-x-hidden shadow-2xl md:rounded-[48px] md:my-6 md:border-8 md:border-surface">
+<!-- Top Navigation (Executing Shared TopAppBar logic) -->
+<header class="flex justify-between items-center w-full px-5 py-3 pt-14 max-w-md mx-auto z-10 border-b border-border-hairline bg-background">
+<!-- Close Action -->
+<button aria-label="Close" class="w-12 h-12 flex items-center justify-center rounded-full text-text-primary hover:bg-accent-tint active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]" data-icon="close">close</span>
+</button>
+<!-- Headline -->
+<h1 class="text-title-lg font-title-lg text-text-primary font-bold tracking-tight">
+        Activity Complete
+      </h1>
+<!-- Trailing Action -->
+<button aria-label="Help" class="w-12 h-12 flex items-center justify-center rounded-full text-text-primary hover:bg-accent-tint active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]" data-icon="help">help</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-5 pt-3 pb-6 flex flex-col gap-4 overflow-y-auto z-0">
+<!-- Hero Photograph Container -->
+<div class="relative w-full rounded-[24px] overflow-hidden shadow-card-soft border border-border-hairline bg-surface">
+<img alt="Authentic candid natural lifestyle photography of a cheerful 5-year-old girl with a beaming smile giving an enthusiastic high five to her mother in a cozy, sunlit living room with bookshelves in the soft background. Warm natural afternoon daylight, joyful candid moment, genuine celebration after reading together, real photography, 35mm film aesthetic, soft depth of field, no CGI, no 3D render, no claymorphism, no artificial glossy textures." class="w-full h-44 object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT9KtBUESFz5hpcu5zWrT9-4P_4tPBw6KVcjJ0-DgY360dW6YwWInFAcxDB0GLEf5Tgm9ecVUA8I8TMMYzHzSeqgMk9QwU9r2HnSDpKQ80-j5IQgrnc3AEjy3nsIiUlcSs6-I-AINBhePerl7uk-sHvJwRft02ynhhLwfisiIQx8c2s4TOuuyayFhvXkqlm1aKOcjR8GXg2XTpZsn31JqJ4SEqXXHVYPapvk1B-gQyuCWUUrNFgJLBYe7NfLSabGuY54NHYuZbYQ"/>
+<!-- Subtle Top-Corner Category Tag -->
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full border border-border-hairline flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-container" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+<span class="font-label text-caption text-text-secondary font-semibold">Phonics Fun</span>
+</div>
+</div>
+<!-- Celebration Card: Pure White with Soft Shadow -->
+<div class="bg-surface rounded-[24px] p-5 shadow-card-soft border border-border-hairline flex flex-col items-center text-center gap-4">
+<!-- Stars Row -->
+<div aria-label="3 out of 3 stars achieved" class="flex items-center justify-center gap-2 pt-1">
+<div class="w-10 h-10 rounded-full bg-accent-tint flex items-center justify-center text-primary-container shadow-sm">
+<span class="material-symbols-outlined text-[26px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-accent-tint flex items-center justify-center text-primary-container shadow-sm -mt-2">
+<span class="material-symbols-outlined text-[32px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-accent-tint flex items-center justify-center text-primary-container shadow-sm">
+<span class="material-symbols-outlined text-[26px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- Hero Title -->
+<div class="space-y-1">
+<h2 class="font-headline-hero text-headline-hero text-text-primary">
+            Great reading, Maya!
+          </h2>
+<p class="font-body text-body text-text-secondary max-w-[280px] mx-auto">
+            You practiced your short <span class="font-bold text-cat-sounds-text">"a"</span> sounds together wonderfully.
+          </p>
+</div>
+<!-- Badge Earned Pill Card -->
+<div class="w-full bg-support-tint rounded-[20px] p-3.5 flex items-center gap-3 border border-[#ded5fc] text-left">
+<div class="w-14 h-14 rounded-full bg-surface p-1 shadow-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-border-hairline">
+<img alt="Sound Explorer Badge" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3b0E8JEXkk1kSdXy-LwKluxDKgyIzN9rdalxbBtQRk8lRrV1zGdwZYN-0FCKciqihRmKxYTFrNUy8ZZTObAxmF40R-PAFiGeZvm1xbj-1nO77j3ZYKS2xjkxoMnWi5kFjCCLgA5i1tjG0DaagNJnuEdPQYaS2eRitwpUt-59s8Khw5H3UdE9REgXIonZP6gju2i_zj4iHeEAyMfA8i9jqR3PgP080euezPkf9LGCXZvE3nL4UoFWWLw"/>
+</div>
+<div class="flex flex-col items-start gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-accent-tint font-label text-caption text-cat-sounds-text font-bold uppercase tracking-wider text-[11px]">
+              New badge unlocked!
+            </span>
+<div class="font-title-lg text-title-lg text-support-tint-text leading-tight">
+              Sound Explorer
+            </div>
+</div>
+</div>
+<!-- Stats Bento Row -->
+<div class="w-full grid grid-cols-1 gap-2.5 pt-1">
+<!-- Words Mastered -->
+<div class="bg-surface-alt/70 rounded-[18px] p-3 flex flex-col items-start gap-2 border border-border-hairline">
+<div class="flex items-center gap-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-cat-sounds-text" data-icon="menu_book">menu_book</span>
+<span class="font-label text-caption font-semibold">New words discovered:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 w-full">
+<span class="px-3 py-1 rounded-full bg-accent-tint text-cat-sounds-text font-label text-label font-bold border border-[#fbd0ea]">
+                cat
+              </span>
+<span class="px-3 py-1 rounded-full bg-accent-tint text-cat-sounds-text font-label text-label font-bold border border-[#fbd0ea]">
+                sat
+              </span>
+<span class="px-3 py-1 rounded-full bg-accent-tint text-cat-sounds-text font-label text-label font-bold border border-[#fbd0ea]">
+                mat
+              </span>
+</div>
+</div>
+<!-- Time & Practice Stat Pill -->
+<div class="flex items-center justify-between bg-surface-alt/50 rounded-[16px] px-3.5 py-2.5 border border-border-hairline">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-support-tint flex items-center justify-center text-support-tint-text">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+</div>
+<span class="font-label text-caption text-text-secondary font-medium">Time together</span>
+</div>
+<span class="font-title-lg text-label text-text-primary font-bold">3 min</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Actions Container (No Bottom Nav Tab Bar as per instructions) -->
+<footer class="w-full px-5 pb-8 pt-2 flex flex-col gap-2.5 z-10 bg-gradient-to-t from-background via-background to-transparent">
+<!-- Primary Action Button -->
+<button class="w-full h-14 rounded-full bg-primary-container text-surface font-title-lg text-body font-semibold flex items-center justify-center gap-2 shadow-md hover:bg-accent-pressed active:scale-95 transition-transform duration-150" type="button">
+<span>Next activity</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Secondary Action Button -->
+<button class="w-full h-14 rounded-full bg-surface border-[1.5px] border-border-control text-text-primary font-title-lg text-body font-semibold flex items-center justify-center hover:bg-surface-alt active:scale-95 transition-transform duration-150" type="button">
+<span>Back to today</span>
+</button>
+</footer>
+</div>
+</body></html>

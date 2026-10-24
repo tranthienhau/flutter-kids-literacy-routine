@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=393, height=852, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Pip Finds a Hat - Storybook</title>
+<!-- Google Fonts: Sniglet & Varela Round -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#ca047e",
+            "primary": "#9f0062",
+            "on-primary-fixed": "#3d0023",
+            "tertiary": "#105e00",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#b3a1fd",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#cbbeff",
+            "cat-rhymes-text": "#166534",
+            "surface-tint": "#b70071",
+            "success-bg": "#E3F4E9",
+            "surface-container-low": "#fff0f3",
+            "on-primary-fixed-variant": "#8c0056",
+            "danger-bg": "#FBE5E5",
+            "on-tertiary-fixed": "#022100",
+            "cat-reading-text": "#4B3A9C",
+            "text-tertiary": "#7A6673",
+            "on-secondary-fixed-variant": "#4a388d",
+            "cat-sounds-bg": "#FEE3F3",
+            "accent-pressed": "#C2037A",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#a9ff8d",
+            "on-secondary-container": "#453387",
+            "surface-variant": "#f6dce4",
+            "on-surface-variant": "#584049",
+            "primary-fixed-dim": "#ffb0cf",
+            "accent-tint-text": "#8F0459",
+            "warning-bg": "#FAEFE1",
+            "tertiary-fixed-dim": "#7cdd61",
+            "on-primary-container": "#ffe3eb",
+            "on-background": "#26171d",
+            "error": "#ba1a1a",
+            "success-text": "#0E7C3A",
+            "support-tint": "#EEE9FE",
+            "border-hairline": "#EED9E6",
+            "on-tertiary": "#ffffff",
+            "secondary": "#6251a7",
+            "inverse-surface": "#3c2c32",
+            "cat-stories-bg": "#FFEBDD",
+            "surface": "#FFFFFF",
+            "text-primary": "#1F0C18",
+            "inverse-primary": "#ffb0cf",
+            "secondary-fixed": "#e7deff",
+            "primary-fixed": "#ffd9e5",
+            "on-surface": "#26171d",
+            "cat-rhymes-bg": "#DDF5EA",
+            "cat-stories-text": "#8A3F00",
+            "support-strong": "#9880FA",
+            "danger-text": "#CE2020",
+            "support-tint-text": "#4B3A9C",
+            "accent-tint": "#FEE3F3",
+            "on-error": "#ffffff",
+            "surface-bright": "#fff8f8",
+            "on-secondary-fixed": "#1e0061",
+            "surface-alt": "#F8E9F2",
+            "tertiary-container": "#177a00",
+            "outline": "#8c6f79",
+            "surface-container-highest": "#f6dce4",
+            "inverse-on-surface": "#ffecf1",
+            "surface-dim": "#eed3db",
+            "background": "#FCF4F9",
+            "surface-container-high": "#fce1e9",
+            "outline-variant": "#e0bec9",
+            "cat-sounds-text": "#8F0459",
+            "surface-container": "#ffe8ee",
+            "on-tertiary-fixed-variant": "#0d5300",
+            "tertiary-fixed": "#97fa7a",
+            "cat-reading-bg": "#EEE9FE",
+            "on-error-container": "#93000a",
+            "text-secondary": "#5E4A57",
+            "on-primary": "#ffffff",
+            "border-control": "#B682AE",
+            "accent": "#FC69C3",
+            "warning-text": "#A75906"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "1.5rem",
+            "xl": "2rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "title-lg": ["Varela Round", "sans-serif"],
+            "reading-child": ["Varela Round", "sans-serif"],
+            "label": ["Varela Round", "sans-serif"],
+            "body": ["Varela Round", "sans-serif"],
+            "caption": ["Varela Round", "sans-serif"],
+            "headline-hero": ["Sniglet", "cursive"]
+          },
+          "fontSize": {
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "reading-child": ["24px", { "lineHeight": "1.4", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "headline-hero": ["22px", { "lineHeight": "28px", "fontWeight": "800" }]
+          },
+          "boxShadow": {
+            "soft-card": "0 1px 2px rgba(31,12,24,.04), 0 8px 24px rgba(31,12,24,.06)"
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1;
+    }
+    /* Subtle touch highlight */
+    .word-tap:active {
+      transform: scale(0.96);
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center selection:bg-accent-tint selection:text-accent-tint-text">
+<!-- Mobile Viewport Frame (393px x 852px) -->
+<div class="w-full max-w-[393px] h-[852px] max-h-[852px] bg-background flex flex-col relative overflow-hidden select-none border-x border-border-hairline shadow-2xl">
+<!-- Top Progress Indicator Bar -->
+<div class="w-full h-1 bg-border-hairline overflow-hidden z-20">
+<div class="h-full bg-primary-container rounded-full" style="width: 37.5%;"></div>
+</div>
+<!-- TopAppBar (from Shared Components JSON specifications) -->
+<header class="flex items-center justify-between px-5 h-14 bg-surface border-b border-border-hairline shrink-0 z-10 shadow-sm">
+<!-- Leading Close Button -->
+<button aria-label="Close" class="w-12 h-12 -ml-2 rounded-full flex items-center justify-center text-text-secondary hover:bg-accent-tint active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<!-- Center Title -->
+<h1 class="font-headline-hero text-headline-hero text-primary tracking-tight">
+        Pip Finds a Hat
+      </h1>
+<!-- Trailing Action: Page indicator chip -->
+<div class="flex items-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-accent-tint text-accent-tint-text font-caption text-caption font-semibold">
+          Page 3 of 8
+        </span>
+</div>
+</header>
+<!-- Main Story Canvas (Scrollable without scrollbar) -->
+<main class="flex-1 overflow-y-auto px-5 pt-3.5 pb-2 flex flex-col space-y-3.5 no-scrollbar">
+<!-- Story Illustration Container -->
+<div class="w-full bg-surface rounded-lg p-2.5 border border-border-hairline shadow-soft-card">
+<div class="w-full h-[264px] rounded-[18px] overflow-hidden bg-surface-alt relative">
+<img alt="Pip the golden puppy finding a warm red knit hat in the garden" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyeE9req5sXGiCkxs6QiLTp6qyhSYF2bJGK0fB1cXjBWSwfPRVE3-sMs13YwfInz70oCOT7y4fYUM6soIpP1_5T7n8DApilbpEX1XP0Isq4o7mI6wJGdnc3ga-DEDQVxow1wQ0UIGeQjRgNaCgNVWhY2KZp523fkwhsa2tjgcYPR--hRu82SpyJFImpBaTiJPfM-UKUfw18UIyxs_3JK83JRhq_xmWSOg2Tt3ss0mE1zTYkKsKQa3u0IX_5CKzkXl_RxeGu62VUw"/>
+</div>
+</div>
+<!-- Story Text Interactive Container -->
+<section class="bg-surface rounded-lg p-4 border border-border-hairline shadow-soft-card flex flex-col justify-between">
+<div class="font-reading-child text-reading-child text-text-primary leading-[1.5] space-y-2">
+<p class="flex flex-wrap items-center gap-1.5">
+<span>Pip</span>
+<span>sees</span>
+<span>a</span>
+<!-- Interactive Tappable Word Chip (Hat) -->
+<button class="word-tap inline-flex items-center px-2.5 py-0.5 rounded-full bg-accent-tint text-accent-tint-text font-bold shadow-xs border border-primary-fixed hover:bg-primary-fixed transition-all" onclick="triggerWordSound(this)" type="button">
+<span>red</span>
+</button>
+<button class="word-tap inline-flex items-center gap-1 px-3 py-0.5 rounded-full bg-accent-tint text-accent-tint-text font-bold shadow-xs border border-primary-fixed hover:bg-primary-fixed transition-all" id="tappable-hat-1" onclick="triggerWordSound(this)" type="button">
+<span>hat</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</button>
+<span>.</span>
+</p>
+<p class="flex flex-wrap items-center gap-1.5">
+<span>Is</span>
+<span>it</span>
+<span>a</span>
+<span>big</span>
+<span>hat?</span>
+</p>
+<p class="flex flex-wrap items-center gap-1.5">
+<span>No,</span>
+<span>it</span>
+<span>is</span>
+<span>a</span>
+<span>little</span>
+<button class="word-tap inline-flex items-center gap-1 px-3 py-0.5 rounded-full bg-accent-tint text-accent-tint-text font-bold shadow-xs border border-primary-fixed hover:bg-primary-fixed transition-all" id="tappable-hat-2" onclick="triggerWordSound(this)" type="button">
+<span>hat</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</button>
+<span>!</span>
+</p>
+</div>
+</section>
+<!-- Page Controls & Pagination Bar -->
+<section class="flex items-center justify-between px-1 py-1">
+<!-- Audio Read-Aloud Button -->
+<button aria-label="Read Story Aloud" class="w-12 h-12 rounded-full bg-surface border border-border-hairline text-text-primary shadow-soft-card flex items-center justify-center hover:bg-accent-tint hover:text-primary active:scale-95 transition-all" id="audioToggleBtn" onclick="toggleSpeech(this)" type="button">
+<span class="material-symbols-outlined text-[24px]">volume_up</span>
+</button>
+<!-- Pagination Controls: Prev, Dots, Next -->
+<div class="flex items-center gap-3">
+<!-- Previous Page Button -->
+<button aria-label="Previous Page" class="w-12 h-12 rounded-full bg-surface border border-border-hairline text-text-primary shadow-soft-card flex items-center justify-center hover:bg-accent-tint active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+</button>
+<!-- 8 Page Dots (Page 3 active) -->
+<div class="flex items-center gap-1.5 px-1 py-2">
+<span class="w-2 h-2 rounded-full bg-border-hairline"></span>
+<span class="w-2 h-2 rounded-full bg-border-hairline"></span>
+<!-- Active Dot 3 -->
+<span class="w-3.5 h-2 rounded-full bg-primary-container transition-all"></span>
+<span class="w-2 h-2 rounded-full bg-border-hairline"></span>
+<span class="w-2 h-2 rounded-full bg-border-hairline"></span>
+<span class="w-2 h-2 rounded-full bg-border-hairline"></span>
+<span class="w-2 h-2 rounded-full bg-border-hairline"></span>
+<span class="w-2 h-2 rounded-full bg-border-hairline"></span>
+</div>
+<!-- Next Page Button -->
+<button aria-label="Next Page" class="w-12 h-12 rounded-full bg-primary-container text-on-primary shadow-soft-card flex items-center justify-center hover:bg-accent-pressed active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Pinned Parent Coaching Card (Docked above iOS safe-area) -->
+<div class="px-5 pt-1 pb-7 bg-background shrink-0">
+<div class="bg-cat-reading-bg border border-[#D8D0F8] rounded-lg p-3.5 shadow-soft-card flex items-start gap-3">
+<!-- Coaching Icon Badge -->
+<div class="w-9 h-9 rounded-full bg-surface flex items-center justify-center shrink-0 text-cat-reading-text shadow-xs">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div class="flex-1 space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption tracking-wider uppercase font-bold text-cat-reading-text">
+              COACH TIP
+            </span>
+<span class="text-[11px] font-caption text-text-tertiary">Reading Prompt</span>
+</div>
+<p class="font-body text-[14px] leading-snug text-text-primary">
+            Point to the word <strong class="text-primary font-bold underline decoration-primary/40 underline-offset-2">hat</strong>. Ask Maya to find it again on this page.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Audio Feedback Micro-Script -->
+<script>
+    function triggerWordSound(button) {
+      button.classList.add('ring-2', 'ring-primary-container', 'scale-105');
+      setTimeout(() => {
+        button.classList.remove('ring-2', 'ring-primary-container', 'scale-105');
+      }, 300);
+    }
+
+    let isPlaying = false;
+    function toggleSpeech(button) {
+      isPlaying = !isPlaying;
+      const icon = button.querySelector('.material-symbols-outlined');
+      if (isPlaying) {
+        button.classList.add('bg-accent-tint', 'text-primary', 'border-primary');
+        icon.innerText = 'pause';
+      } else {
+        button.classList.remove('bg-accent-tint', 'text-primary', 'border-primary');
+        icon.innerText = 'volume_up';
+      }
+    }
+  </script>
+</body></html>

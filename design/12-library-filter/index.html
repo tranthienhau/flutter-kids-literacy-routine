@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hopscotch - Library Filter</title>
+<!-- Google Fonts: Varela Round & Sniglet -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface-variant": "#584049",
+            "error": "#ba1a1a",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed-variant": "#4a388d",
+            "cat-stories-text": "#8A3F00",
+            "text-primary": "#1F0C18",
+            "cat-stories-bg": "#FFEBDD",
+            "cat-reading-bg": "#EEE9FE",
+            "background": "#FCF4F9",
+            "support-tint-text": "#4B3A9C",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#a9ff8d",
+            "primary-fixed-dim": "#ffb0cf",
+            "accent-tint": "#FEE3F3",
+            "surface-variant": "#f6dce4",
+            "cat-rhymes-bg": "#DDF5EA",
+            "text-secondary": "#5E4A57",
+            "on-background": "#26171d",
+            "inverse-primary": "#ffb0cf",
+            "surface-dim": "#eed3db",
+            "secondary": "#6251a7",
+            "on-tertiary": "#ffffff",
+            "warning-bg": "#FAEFE1",
+            "surface-container-low": "#fff0f3",
+            "secondary-container": "#b3a1fd",
+            "border-control": "#B682AE",
+            "on-primary-fixed": "#3d0023",
+            "tertiary-fixed-dim": "#7cdd61",
+            "surface-container": "#ffe8ee",
+            "on-primary-fixed-variant": "#8c0056",
+            "accent": "#FC69C3",
+            "primary-container": "#ca047e",
+            "inverse-on-surface": "#ffecf1",
+            "cat-sounds-text": "#8F0459",
+            "surface-bright": "#fff8f8",
+            "tertiary-container": "#177a00",
+            "danger-bg": "#FBE5E5",
+            "outline": "#8c6f79",
+            "cat-sounds-bg": "#FEE3F3",
+            "tertiary-fixed": "#97fa7a",
+            "border-hairline": "#EED9E6",
+            "on-tertiary-fixed": "#022100",
+            "on-tertiary-fixed-variant": "#0d5300",
+            "surface": "#FFFFFF",
+            "success-text": "#0E7C3A",
+            "on-primary-container": "#ffe3eb",
+            "error-container": "#ffdad6",
+            "support-strong": "#9880FA",
+            "on-error": "#ffffff",
+            "on-secondary-container": "#453387",
+            "on-surface": "#26171d",
+            "success-bg": "#E3F4E9",
+            "support-tint": "#EEE9FE",
+            "tertiary": "#105e00",
+            "on-secondary-fixed": "#1e0061",
+            "cat-reading-text": "#4B3A9C",
+            "surface-container-high": "#fce1e9",
+            "accent-pressed": "#C2037A",
+            "text-tertiary": "#7A6673",
+            "inverse-surface": "#3c2c32",
+            "danger-text": "#CE2020",
+            "warning-text": "#A75906",
+            "accent-tint-text": "#8F0459",
+            "cat-rhymes-text": "#166534",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-tint": "#b70071",
+            "primary-fixed": "#ffd9e5",
+            "surface-alt": "#F8E9F2",
+            "secondary-fixed-dim": "#cbbeff",
+            "secondary-fixed": "#e7deff",
+            "surface-container-highest": "#f6dce4",
+            "primary": "#9f0062",
+            "outline-variant": "#e0bec9"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-2xl": "2rem",
+            "space-md": "0.75rem",
+            "gutter": "1rem",
+            "space-lg": "1rem",
+            "margin": "1.25rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "reading-child": ["Varela Round", "sans-serif"],
+            "caption": ["Varela Round", "sans-serif"],
+            "body": ["Varela Round", "sans-serif"],
+            "label": ["Varela Round", "sans-serif"],
+            "title-lg": ["Varela Round", "sans-serif"],
+            "headline-hero": ["Sniglet", "cursive"]
+          },
+          "fontSize": {
+            "reading-child": ["28px", { "lineHeight": "1.4", "fontWeight": "400" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-hero": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+          },
+          "boxShadow": {
+            "card-soft": "0 1px 2px rgba(31,12,24,.04), 0 8px 24px rgba(31,12,24,.06)",
+            "sheet": "0 -8px 32px rgba(31,12,24,.12)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1, 'wght' 500;
+    }
+    /* Hide scrollbar for clean mobile presentation */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#1F0C18]/60 flex items-center justify-center min-h-screen antialiased p-0 sm:p-4 font-body select-none">
+<!-- Mobile Device Simulation Frame (393 x 852 pt iPhone standard) -->
+<div class="relative w-full max-w-[393px] h-[852px] bg-background overflow-hidden shadow-2xl sm:rounded-[48px] flex flex-col justify-end">
+<!-- BACKGROUND CONTEXT: Dimmed & Blurred Hopscotch Library View -->
+<div aria-hidden="true" class="absolute inset-0 z-0 flex flex-col pointer-events-none filter blur-[3px] scale-[0.99] select-none">
+<!-- iOS Status Bar Placeholder -->
+<div class="h-12 w-full flex items-center justify-between px-7 pt-3 text-text-primary opacity-80">
+<span class="font-label text-caption font-semibold">9:41</span>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<!-- Library Top App Bar -->
+<div class="px-5 pt-3 pb-2 flex justify-between items-center">
+<div>
+<span class="font-label text-caption text-text-secondary">Library</span>
+<h1 class="font-headline-hero text-title-lg text-text-primary tracking-tight">Maya's collection (Age 5)</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-accent-tint flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+</div>
+<!-- Library Content Grid (Blurred Preview) -->
+<div class="px-5 pt-4 space-y-4">
+<!-- Story Card 1 -->
+<div class="bg-surface rounded-lg p-3 shadow-card-soft border border-border-hairline flex items-center space-x-3">
+<img alt="Little kid playing with toy red bus" class="w-20 h-20 rounded-xl object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VBq4o4W0lrFg1OQNESJNaXcTPNfoPoLCKXut0lxF7r5ReBhv8fkASmq98OMAtfVWcVDt-tmCtrs5C_k1ll9IDBKvFEPZmSOMO5Y-h3raOPXnVpjJiUgfpLJpzfnfH6db_xlhLgmfjkSiJ_RVY74zc55Dzgu3EhskYtAZ9n9xJN0CfPr8QqqIjGYcULF3BEb79VYKAqrgkicIpwMinXE_DkdH2TkravcMcvs8DnKYYlyUnBEI4sUeYvqg"/>
+<div>
+<span class="text-caption font-label text-cat-stories-text bg-cat-stories-bg px-2.5 py-0.5 rounded-full inline-block mb-1">Story • 4 min</span>
+<h3 class="font-title-lg text-body text-text-primary font-bold">The Big Red Bus</h3>
+<p class="font-caption text-caption text-text-secondary">Explore phonics with Maya's favorite bus adventure</p>
+</div>
+</div>
+<!-- Story Card 2 -->
+<div class="bg-surface rounded-lg p-3 shadow-card-soft border border-border-hairline flex items-center space-x-3">
+<img alt="Puppy finding red hat in lush garden" class="w-20 h-20 rounded-xl object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XNF0L1Cj0SFyq03YsNZq_t2JKtuHE3Aj4cxFrVtAjqgpf1yX5qamlmi16Hz-hgpLm7qWXjEAdoKLdye3vRPMjmKHQHUSumwXmizKY6xSRKFKG6lwajm7ZexdIy8TwqwV1f0hWR7jOplK9omdlSsbpv9BEQv7N7qXtPsEooIBgvLQesxdjhhb9SUU1sE1gTW77u7q72InZwu67ZrEvdNC9LcH6Sh46aonFt1bPYXhZL6UITt5M5KyHs"/>
+<div>
+<span class="text-caption font-label text-cat-rhymes-text bg-cat-rhymes-bg px-2.5 py-0.5 rounded-full inline-block mb-1">Rhymes • 3 min</span>
+<h3 class="font-title-lg text-body text-text-primary font-bold">Bramble's Red Hat</h3>
+<p class="font-caption text-caption text-text-secondary">Rhyming sounds in the summer flower garden</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SEMANTIC BACKDROP OVERLAY -->
+<div class="absolute inset-0 bg-[#1F0C18]/45 z-10 transition-opacity backdrop-blur-[2px]"></div>
+<!-- MODAL BOTTOM SHEET (Occupies lower ~80% of screen) -->
+<div class="relative z-20 w-full h-[82%] bg-surface rounded-t-[28px] shadow-sheet flex flex-col overflow-hidden animate-in slide-in-from-bottom duration-300">
+<!-- Top Handle indicator -->
+<div class="w-full flex justify-center pt-3 pb-1">
+<div class="w-12 h-1.5 rounded-full bg-border-hairline"></div>
+</div>
+<!-- SHARED COMPONENT: TopAppBar (Filter Modal Header) -->
+<!-- Rendered verbatim per Shared Components JSON specification -->
+<header class="flex justify-between items-center w-full px-margin py-space-md border-b border-border-hairline bg-surface flex-shrink-0">
+<!-- Leading Icon Button -->
+<button aria-label="Close filter" class="w-10 h-10 rounded-full flex items-center justify-center text-text-secondary hover:opacity-80 active:scale-95 transition-all focus:outline-none" type="button">
+<span class="material-symbols-outlined text-2xl text-text-primary" data-icon="close">close</span>
+</button>
+<!-- Headline Anchor -->
+<h2 class="text-title-lg font-title-lg text-text-primary font-bold tracking-tight">Filter</h2>
+<!-- Trailing Action -->
+<button aria-label="Reset all filters" class="text-label font-label text-primary-container font-semibold px-2 py-1 rounded-full hover:opacity-80 active:scale-95 transition-all focus:outline-none" type="button">
+          Reset
+        </button>
+</header>
+<!-- Scrollable Filters Container -->
+<div class="flex-1 overflow-y-auto no-scrollbar px-margin py-4 space-y-6">
+<!-- SECTION 1: Category -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-label font-label text-text-primary font-bold tracking-wide">Category</span>
+<span class="text-caption font-caption text-text-tertiary">2 selected</span>
+</div>
+<div class="flex flex-wrap gap-2.5">
+<!-- 'Stories' SELECTED -->
+<button class="inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-full bg-cat-stories-bg border-2 border-cat-stories-text/40 text-cat-stories-text font-label text-caption font-semibold shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+<span>Stories</span>
+</button>
+<!-- 'Reading' SELECTED -->
+<button class="inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-full bg-cat-reading-bg border-2 border-support-tint-text/40 text-cat-reading-text font-label text-caption font-semibold shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+<span>Reading</span>
+</button>
+<!-- 'Sounds' UNSELECTED -->
+<button class="inline-flex items-center px-4 py-2.5 rounded-full bg-surface border border-border-hairline text-text-secondary font-label text-caption font-medium hover:border-border-control active:scale-95 transition-all" type="button">
+<span>Sounds</span>
+</button>
+<!-- 'Rhymes' UNSELECTED -->
+<button class="inline-flex items-center px-4 py-2.5 rounded-full bg-surface border border-border-hairline text-text-secondary font-label text-caption font-medium hover:border-border-control active:scale-95 transition-all" type="button">
+<span>Rhymes</span>
+</button>
+</div>
+</section>
+<!-- SECTION 2: Skill -->
+<section class="space-y-3">
+<span class="text-label font-label text-text-primary font-bold tracking-wide block">Skill</span>
+<div class="flex flex-wrap gap-2.5">
+<!-- 'Letter sounds' -->
+<button class="inline-flex items-center px-4 py-2.5 rounded-full bg-surface border border-border-hairline text-text-secondary font-label text-caption font-medium active:scale-95 transition-all" type="button">
+              Letter sounds
+            </button>
+<!-- 'Blending' (SELECTED in primary-container) -->
+<button class="inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-full bg-primary-container text-on-primary font-label text-caption font-semibold shadow-card-soft active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+<span>Blending</span>
+</button>
+<!-- 'Sight words' -->
+<button class="inline-flex items-center px-4 py-2.5 rounded-full bg-surface border border-border-hairline text-text-secondary font-label text-caption font-medium active:scale-95 transition-all" type="button">
+              Sight words
+            </button>
+<!-- 'Rhyming' -->
+<button class="inline-flex items-center px-4 py-2.5 rounded-full bg-surface border border-border-hairline text-text-secondary font-label text-caption font-medium active:scale-95 transition-all" type="button">
+              Rhyming
+            </button>
+</div>
+</section>
+<!-- SECTION 3: Length (Segmented Control) -->
+<section class="space-y-3">
+<span class="text-label font-label text-text-primary font-bold tracking-wide block">Length</span>
+<div class="p-1 rounded-[16px] bg-surface-alt flex items-center justify-between border border-border-hairline">
+<!-- Under 3 min -->
+<button class="flex-1 py-2 text-center font-label text-caption font-medium text-text-secondary rounded-[12px] hover:text-text-primary transition-all" type="button">
+              Under 3 min
+            </button>
+<!-- 3–5 min (SELECTED) -->
+<button class="flex-1 py-2 text-center font-label text-caption font-bold text-text-primary bg-surface rounded-[12px] shadow-card-soft border border-border-hairline/60 transition-all" type="button">
+              3–5 min
+            </button>
+<!-- 5+ min -->
+<button class="flex-1 py-2 text-center font-label text-caption font-medium text-text-secondary rounded-[12px] hover:text-text-primary transition-all" type="button">
+              5+ min
+            </button>
+</div>
+</section>
+<!-- SECTION 4: Reading stage / Level -->
+<section class="space-y-3">
+<span class="text-label font-label text-text-primary font-bold tracking-wide block">Reading stage / Level</span>
+<div class="flex gap-2.5">
+<!-- Level 1 (SELECTED) -->
+<button class="flex-1 inline-flex items-center justify-center space-x-1 py-2.5 px-3 rounded-full bg-accent-tint border-2 border-primary-container text-primary-container font-label text-caption font-bold shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Level 1</span>
+</button>
+<!-- Level 2 -->
+<button class="flex-1 inline-flex items-center justify-center py-2.5 px-3 rounded-full bg-surface border border-border-hairline text-text-secondary font-label text-caption font-medium active:scale-95 transition-all" type="button">
+              Level 2
+            </button>
+<!-- Level 3 -->
+<button class="flex-1 inline-flex items-center justify-center py-2.5 px-3 rounded-full bg-surface border border-border-hairline text-text-secondary font-label text-caption font-medium active:scale-95 transition-all" type="button">
+              Level 3
+            </button>
+</div>
+</section>
+<!-- SECTION 5: Toggle switch row -->
+<section class="pt-2 pb-1 border-t border-border-hairline">
+<div class="flex items-center justify-between py-1">
+<div class="pr-4">
+<h4 class="font-label text-body text-text-primary font-semibold">Hide finished activities</h4>
+<p class="font-caption text-caption text-text-tertiary">Only show stories and games Maya hasn't completed</p>
+</div>
+<!-- iOS Style Active Toggle Switch -->
+<button aria-checked="true" class="w-13 h-8 w-[52px] h-[30px] rounded-full bg-primary-container p-0.5 transition-colors focus:outline-none flex items-center justify-end shadow-inner cursor-pointer" role="switch" type="button">
+<div class="w-[26px] h-[26px] rounded-full bg-white shadow-md transform transition-transform"></div>
+</button>
+</div>
+</section>
+</div>
+<!-- DOCKED BOTTOM ACTION CONTAINER (No TabBar rendered per constraints) -->
+<div class="w-full bg-surface border-t border-border-hairline px-margin pt-3 pb-8 flex flex-col items-center flex-shrink-0">
+<button class="w-full h-14 rounded-full bg-primary-container hover:bg-accent-pressed text-on-primary font-title-lg text-body font-bold flex items-center justify-center shadow-card-soft active:scale-[0.98] transition-all focus:outline-none" type="button">
+          Show 14 activities
+        </button>
+</div>
+</div>
+</div>
+</body></html>

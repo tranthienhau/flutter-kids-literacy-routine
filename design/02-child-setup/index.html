@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Hopscotch - Child Setup</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#7cdd61",
+            "cat-stories-text": "#8A3F00",
+            "surface-tint": "#b70071",
+            "cat-rhymes-text": "#166534",
+            "on-tertiary-container": "#a9ff8d",
+            "inverse-primary": "#ffb0cf",
+            "inverse-on-surface": "#ffecf1",
+            "surface-alt": "#F8E9F2",
+            "danger-bg": "#FBE5E5",
+            "success-bg": "#E3F4E9",
+            "on-primary": "#ffffff",
+            "on-surface": "#26171d",
+            "surface-container": "#ffe8ee",
+            "on-background": "#26171d",
+            "accent-tint": "#FEE3F3",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "outline-variant": "#e0bec9",
+            "tertiary-container": "#177a00",
+            "on-secondary-container": "#453387",
+            "primary-fixed-dim": "#ffb0cf",
+            "primary": "#9f0062",
+            "on-primary-container": "#ffe3eb",
+            "surface-variant": "#f6dce4",
+            "text-tertiary": "#7A6673",
+            "on-tertiary-fixed": "#022100",
+            "text-secondary": "#5E4A57",
+            "cat-stories-bg": "#FFEBDD",
+            "tertiary-fixed": "#97fa7a",
+            "secondary-container": "#b3a1fd",
+            "surface-container-highest": "#f6dce4",
+            "on-tertiary-fixed-variant": "#0d5300",
+            "inverse-surface": "#3c2c32",
+            "support-tint": "#EEE9FE",
+            "accent": "#FC69C3",
+            "warning-bg": "#FAEFE1",
+            "surface-bright": "#fff8f8",
+            "outline": "#8c6f79",
+            "on-secondary-fixed-variant": "#4a388d",
+            "cat-sounds-bg": "#FEE3F3",
+            "tertiary": "#105e00",
+            "cat-sounds-text": "#8F0459",
+            "text-primary": "#1F0C18",
+            "primary-fixed": "#ffd9e5",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#e7deff",
+            "accent-tint-text": "#8F0459",
+            "on-secondary": "#ffffff",
+            "cat-reading-bg": "#EEE9FE",
+            "danger-text": "#CE2020",
+            "warning-text": "#A75906",
+            "surface-container-lowest": "#ffffff",
+            "background": "#FCF4F9",
+            "on-surface-variant": "#584049",
+            "on-primary-fixed-variant": "#8c0056",
+            "accent-pressed": "#C2037A",
+            "secondary": "#6251a7",
+            "cat-rhymes-bg": "#DDF5EA",
+            "support-tint-text": "#4B3A9C",
+            "secondary-fixed-dim": "#cbbeff",
+            "on-secondary-fixed": "#1e0061",
+            "success-text": "#0E7C3A",
+            "on-primary-fixed": "#3d0023",
+            "surface-container-high": "#fce1e9",
+            "surface-dim": "#eed3db",
+            "surface": "#FFFFFF",
+            "primary-container": "#ca047e",
+            "on-tertiary": "#ffffff",
+            "border-control": "#B682AE",
+            "surface-container-low": "#fff0f3",
+            "border-hairline": "#EED9E6",
+            "support-strong": "#9880FA",
+            "cat-reading-text": "#4B3A9C"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-xl": "1.5rem",
+            "space-lg": "1rem",
+            "gutter": "1rem",
+            "space-md": "0.75rem",
+            "space-2xl": "2rem",
+            "margin": "1.25rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "label": ["Varela Round"],
+            "body": ["Varela Round"],
+            "headline-hero": ["Sniglet"],
+            "title-lg": ["Varela Round"],
+            "reading-child": ["Varela Round"],
+            "caption": ["Varela Round"]
+          },
+          "fontSize": {
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-hero": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "reading-child": ["28px", { "lineHeight": "1.4", "fontWeight": "400" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .card-shadow-soft {
+      box-shadow: 0 1px 2px rgba(31,12,24,.04), 0 8px 24px rgba(31,12,24,.06);
+    }
+    body {
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary min-h-screen flex justify-center antialiased select-none font-body">
+<!-- Mobile Frame (iPhone 393 x 852) -->
+<div class="w-full max-w-[393px] min-h-screen bg-background flex flex-col relative pb-32">
+<!-- Top Sticky Shell / App Bar -->
+<header class="sticky top-0 z-40 bg-background/95 backdrop-blur-md pt-12 pb-3 px-5">
+<div class="flex items-center justify-between mb-3 h-10">
+<!-- Back Navigation Button -->
+<button aria-label="Go back" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-text-primary active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<!-- Step Indicator -->
+<span class="font-label text-label text-text-secondary">Step 2 of 3</span>
+<!-- Skip action (from Shared Component logic) -->
+<button class="font-label text-label text-text-secondary hover:opacity-80 active:scale-95 transition-all px-2 py-1" type="button">
+          Skip
+        </button>
+</div>
+<!-- Segmented Step Progress Bar (66%) -->
+<div class="w-full h-1.5 bg-accent-tint rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full w-2/3 transition-all duration-300"></div>
+</div>
+</header>
+<!-- Main Scrollable Content -->
+<main class="flex-1 px-5 pt-3 pb-8 flex flex-col gap-6">
+<!-- Title & Intro -->
+<div>
+<h1 class="font-headline-hero text-headline-hero text-text-primary tracking-normal mb-1.5">
+          Who is reading with you?
+        </h1>
+<p class="font-body text-body text-text-secondary">
+          Personalize reading adventures tailored just for them.
+        </p>
+</div>
+<!-- Child Avatar Picker -->
+<section>
+<span class="block font-label text-label text-text-primary mb-3">Choose an avatar</span>
+<div class="flex items-center justify-between gap-2.5">
+<!-- Avatar 1 (Selected: Maya) -->
+<div class="relative cursor-pointer group flex flex-col items-center">
+<div class="relative w-[70px] h-[70px] rounded-full p-[3px] bg-primary-container card-shadow-soft active:scale-95 transition-transform">
+<img alt="Selected girl avatar" class="w-full h-full object-cover rounded-full bg-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqwtPVy_zOEXTCGErjv5FdzfQ3jteP4Yl2ZXfdERd_TpOaFnSSCkMKdHhSPTldxmI7Iwlmv2INQGs1kpbtyzHFyEOYHnBQlsF1F4nPBSYggMzqzXVi8AY7J24TiwT6ndkZeOKJ05sGQo5pDKNdDfZ7QcWN0O3mq9YPfpM-Wi7zJaKEUKlcaTl7CwMVaFu0x5odEnOsOQZ46eYgzUSPikSBhThvOfmPVWieTM73DvbUl6X0gpnbGX6CCjJyL1yrMgQDbRrjd7f3TA"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center border-2 border-surface shadow-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+</div>
+<!-- Avatar 2 -->
+<div class="relative cursor-pointer group flex flex-col items-center">
+<div class="w-[70px] h-[70px] rounded-full p-[2.5px] border-2 border-border-hairline bg-surface active:scale-95 transition-transform">
+<img alt="Boy avatar option" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZT0O4PT3pcgGR4hN055wZYimlWJliIwKFDR65HzYhhD6NZQqIzAhHI5LJSwhTyuErCLJ0AvtkOpd_QeiaAvTF6TaR-7AniZW5vacZsEM_khjsP7056-8G1YsFVn3F2RMH6tHvkAMq1T0ZUus0rxRszHmO5dccrf1nC03WxAPF4FCFV0SEQqwFDIAaaU-9e_71hkn9D1HUXLa1RGazBeAhk1i0FkECkzdZTrCAbMfziAcwzve-zmoEO0L9c6AfQp5wglvDOGuIiQ"/>
+</div>
+</div>
+<!-- Avatar 3 -->
+<div class="relative cursor-pointer group flex flex-col items-center">
+<div class="w-[70px] h-[70px] rounded-full p-[2.5px] border-2 border-border-hairline bg-surface active:scale-95 transition-transform">
+<img alt="Boy in sweater avatar option" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs5YBCfgQVrsjEh4GBMzdM_3mtBZ9gqi1b9YdUMRDbdrxS_rtY6ZcqzOWo56y85CBECIPo4Vf6_brG4c4jgcQSlXu0mmUQtePCNU8-j4xZpqe3EWbTrSWW32YYtf_4jDJWyiUefqJuZKLfDxG0iBp0iLWFgdibYO6hHmTs7Dod13ZEchEJJlnvr7oHwujoTDDS3ge1UrxKNi6CZVTyVr_SwS4ALKkS1N34HQZkftpfjcAb1BJ00ukkATbImiU1MxfuYnA9lCwlHQ"/>
+</div>
+</div>
+<!-- Avatar 4 -->
+<div class="relative cursor-pointer group flex flex-col items-center">
+<div class="w-[70px] h-[70px] rounded-full p-[2.5px] border-2 border-border-hairline bg-surface active:scale-95 transition-transform">
+<img alt="Girl with glasses avatar option" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdBNayp67xNIK8Gy5bBA24Tvtg8NqtWZ2a3c4stcrSjVeBC4vKEGwG9RjmUy5TGgDkkflEG9X78TQO2GmRNyuJcPbbD6K3XLXTIo3tARNXDMQSZ5d4cz8oX-r42Ma3n177N9kxmMqnd4c9mScfMd1I5jpO4DOTdWIQQCyuF-4pBmRHn69HVYaMAnWBwUql7PDCs80X5lOElSLWbcibxE3nQH2fRo9onbkpKC3XXO6BJb1_7m1xgphUzFFCwjraojBmAc5QYgjJWg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Input Child's Name -->
+<section>
+<label class="block font-label text-label text-text-primary mb-2" for="child-name">Child's name</label>
+<div class="relative">
+<input class="w-full h-14 px-4 bg-surface rounded-[12px] border border-border-control text-text-primary font-body text-body focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="child-name" type="text" value="Maya"/>
+<button aria-label="Clear or edit name" class="absolute right-3.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center text-text-tertiary hover:text-text-primary active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</section>
+<!-- Age Selector -->
+<section>
+<div class="flex items-center justify-between mb-2.5">
+<label class="font-label text-label text-text-primary">Age</label>
+<span class="font-caption text-caption text-text-secondary">Years old</span>
+</div>
+<div class="grid grid-cols-5 gap-2.5">
+<!-- Age 3 -->
+<button class="h-12 rounded-full bg-surface border border-border-hairline text-text-primary font-label text-label flex items-center justify-center active:scale-95 transition-all" type="button">
+            3
+          </button>
+<!-- Age 4 -->
+<button class="h-12 rounded-full bg-surface border border-border-hairline text-text-primary font-label text-label flex items-center justify-center active:scale-95 transition-all" type="button">
+            4
+          </button>
+<!-- Age 5 (Selected) -->
+<button class="h-12 rounded-full bg-primary-container text-on-primary font-label text-label font-bold flex items-center justify-center shadow-sm active:scale-95 transition-all ring-2 ring-primary-container/20" type="button">
+            5
+          </button>
+<!-- Age 6 -->
+<button class="h-12 rounded-full bg-surface border border-border-hairline text-text-primary font-label text-label flex items-center justify-center active:scale-95 transition-all" type="button">
+            6
+          </button>
+<!-- Age 7 -->
+<button class="h-12 rounded-full bg-surface border border-border-hairline text-text-primary font-label text-label flex items-center justify-center active:scale-95 transition-all" type="button">
+            7
+          </button>
+</div>
+</section>
+<!-- Reading Stage Selection -->
+<section class="flex flex-col gap-2.5">
+<label class="font-label text-label text-text-primary">Reading stage</label>
+<!-- Stage 1 (Selected) -->
+<div class="p-4 rounded-[24px] bg-surface border-2 border-primary-container card-shadow-soft flex items-center justify-between cursor-pointer active:scale-[0.99] transition-all">
+<div class="flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-full bg-accent-tint text-accent-tint-text flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</div>
+<div>
+<div class="font-label text-label font-bold text-text-primary">Just starting</div>
+<div class="font-caption text-caption text-text-secondary">Learning letter sounds</div>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-primary-container flex items-center justify-center shrink-0">
+<div class="w-3 h-3 rounded-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Stage 2 -->
+<div class="p-4 rounded-[24px] bg-surface border border-border-hairline card-shadow-soft flex items-center justify-between cursor-pointer active:scale-[0.99] transition-all">
+<div class="flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-full bg-support-tint text-support-tint-text flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">extension</span>
+</div>
+<div>
+<div class="font-label text-label font-bold text-text-primary">Blending</div>
+<div class="font-caption text-caption text-text-secondary">Sounding out short words</div>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-border-control shrink-0"></div>
+</div>
+<!-- Stage 3 -->
+<div class="p-4 rounded-[24px] bg-surface border border-border-hairline card-shadow-soft flex items-center justify-between cursor-pointer active:scale-[0.99] transition-all">
+<div class="flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-full bg-cat-rhymes-bg text-cat-rhymes-text flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+</div>
+<div>
+<div class="font-label text-label font-bold text-text-primary">Reading</div>
+<div class="font-caption text-caption text-text-secondary">Simple sentences &amp; stories</div>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-border-control shrink-0"></div>
+</div>
+</section>
+<!-- Daily Reminder Row -->
+<section>
+<div class="p-4 rounded-[24px] bg-support-tint flex items-center justify-between card-shadow-soft cursor-pointer active:scale-[0.99] transition-all border border-support-strong/20">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-support-tint-text shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+<div>
+<div class="font-label text-label font-bold text-text-primary">Daily reading reminder</div>
+<div class="font-caption text-caption text-text-secondary">7:00 PM after dinner</div>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface/80 flex items-center justify-center text-support-tint-text shrink-0">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Sticky Action Bar (Pill Button + Disclaimer, No Bottom Nav Bar) -->
+<footer class="fixed bottom-0 left-0 right-0 max-w-[393px] mx-auto bg-background/95 backdrop-blur-md px-5 pt-3 pb-8 z-50">
+<button class="w-full h-14 rounded-full bg-primary-container hover:bg-accent-pressed active:bg-accent-pressed text-on-primary font-label text-body font-bold flex items-center justify-center shadow-md active:scale-[0.98] transition-all" type="button">
+        Build Maya's routine
+      </button>
+<p class="font-caption text-caption text-text-tertiary text-center mt-2.5">
+        You can change these anytime in settings
+      </p>
+</footer>
+</div>
+</body></html>

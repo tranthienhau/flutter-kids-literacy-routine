@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Hopscotch - Achievements</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "warning-bg": "#FAEFE1",
+            "surface": "#FFFFFF",
+            "surface-container-low": "#fff0f3",
+            "surface-dim": "#eed3db",
+            "outline-variant": "#e0bec9",
+            "on-primary-container": "#ffe3eb",
+            "on-tertiary-fixed": "#022100",
+            "text-primary": "#1F0C18",
+            "secondary": "#6251a7",
+            "primary-fixed-dim": "#ffb0cf",
+            "cat-sounds-bg": "#FEE3F3",
+            "tertiary": "#105e00",
+            "border-control": "#B682AE",
+            "surface-container-lowest": "#ffffff",
+            "danger-bg": "#FBE5E5",
+            "inverse-surface": "#3c2c32",
+            "on-tertiary-fixed-variant": "#0d5300",
+            "tertiary-container": "#177a00",
+            "success-bg": "#E3F4E9",
+            "surface-bright": "#fff8f8",
+            "secondary-fixed-dim": "#cbbeff",
+            "accent-tint": "#FEE3F3",
+            "surface-tint": "#b70071",
+            "secondary-container": "#b3a1fd",
+            "surface-alt": "#F8E9F2",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "background": "#FCF4F9",
+            "warning-text": "#A75906",
+            "on-surface": "#26171d",
+            "inverse-on-surface": "#ffecf1",
+            "accent": "#FC69C3",
+            "support-strong": "#9880FA",
+            "tertiary-fixed-dim": "#7cdd61",
+            "outline": "#8c6f79",
+            "cat-rhymes-text": "#166534",
+            "on-primary-fixed-variant": "#8c0056",
+            "danger-text": "#CE2020",
+            "cat-reading-bg": "#EEE9FE",
+            "error": "#ba1a1a",
+            "accent-pressed": "#C2037A",
+            "on-secondary-fixed-variant": "#4a388d",
+            "on-background": "#26171d",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed": "#3d0023",
+            "text-secondary": "#5E4A57",
+            "on-secondary-container": "#453387",
+            "text-tertiary": "#7A6673",
+            "surface-container": "#ffe8ee",
+            "primary": "#9f0062",
+            "cat-reading-text": "#4B3A9C",
+            "surface-container-highest": "#f6dce4",
+            "cat-stories-bg": "#FFEBDD",
+            "cat-rhymes-bg": "#DDF5EA",
+            "accent-tint-text": "#8F0459",
+            "on-tertiary": "#ffffff",
+            "support-tint-text": "#4B3A9C",
+            "cat-sounds-text": "#8F0459",
+            "tertiary-fixed": "#97fa7a",
+            "primary-fixed": "#ffd9e5",
+            "on-surface-variant": "#584049",
+            "cat-stories-text": "#8A3F00",
+            "success-text": "#0E7C3A",
+            "on-error": "#ffffff",
+            "inverse-primary": "#ffb0cf",
+            "on-error-container": "#93000a",
+            "border-hairline": "#EED9E6",
+            "surface-container-high": "#fce1e9",
+            "primary-container": "#ca047e",
+            "on-secondary-fixed": "#1e0061",
+            "support-tint": "#EEE9FE",
+            "secondary-fixed": "#e7deff",
+            "on-tertiary-container": "#a9ff8d",
+            "surface-variant": "#f6dce4"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "0.75rem",
+            "gutter": "1rem",
+            "margin": "1.25rem",
+            "space-lg": "1rem",
+            "space-xs": "0.25rem",
+            "space-xl": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-2xl": "2rem"
+          },
+          "fontFamily": {
+            "caption": ["Varela Round"],
+            "body": ["Varela Round"],
+            "reading-child": ["Varela Round"],
+            "headline-hero": ["Sniglet"],
+            "label": ["Varela Round"],
+            "title-lg": ["Varela Round"]
+          },
+          "fontSize": {
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reading-child": ["28px", { "lineHeight": "1.4", "fontWeight": "400" }],
+            "headline-hero": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-card-shadow {
+      box-shadow: 0 1px 2px rgba(31,12,24,.04), 0 8px 24px rgba(31,12,24,.06);
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary font-body antialiased flex justify-center min-h-screen select-none">
+<!-- Mobile Frame Emulator (393px width for iPhone 16/17 viewport) -->
+<div class="w-full max-w-[393px] bg-background min-h-screen flex flex-col relative pb-[96px]">
+<!-- TopAppBar from Shared Components JSON -->
+<header class="bg-background dark:bg-background border-b border-border-hairline dark:border-outline-variant flex justify-between items-center w-full px-margin h-16 pt-safe sticky top-0 z-40">
+<div class="flex items-center gap-2">
+<button aria-label="Back to Progress" class="w-10 h-10 -ml-1.5 rounded-full flex items-center justify-center text-primary dark:text-primary-fixed hover:bg-accent-tint dark:hover:bg-surface-variant transition-colors duration-200 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div>
+<h1 class="font-title-lg text-title-lg text-text-primary dark:text-on-surface font-semibold tracking-tight leading-tight">Achievements</h1>
+<p class="font-caption text-caption text-text-secondary dark:text-on-surface-variant">7 of 18 earned</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="h-9 px-3 bg-accent-tint rounded-full flex items-center gap-1.5 text-accent-tint-text">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="font-caption text-caption font-bold">Maya</span>
+</div>
+</div>
+</header>
+<!-- Scrollable Main Content -->
+<main class="flex-1 px-margin pt-4 flex flex-col gap-5">
+<!-- Focal Milestone Summary Card -->
+<section class="bg-surface rounded-[24px] p-5 custom-card-shadow border border-border-hairline flex flex-col gap-4 relative overflow-hidden">
+<!-- Subtle decorative top accent tint -->
+<div class="absolute -top-10 -right-10 w-28 h-28 bg-accent-tint rounded-full opacity-60 pointer-events-none"></div>
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-headline-hero text-[19px] leading-tight text-text-primary">Maya's Badges</span>
+<span class="font-label text-label font-bold text-primary-container">7 of 18 unlocked</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-3 bg-surface-alt rounded-full overflow-hidden p-0.5 border border-border-hairline">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500 ease-out" style="width: 38.8%;"></div>
+</div>
+</div>
+<!-- Spotlight: Next to unlock -->
+<div class="bg-surface-alt rounded-[18px] p-3.5 flex items-center gap-3.5 border border-border-hairline/70">
+<!-- Circular Progress Indicator -->
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90 transform" viewbox="0 0 48 48">
+<circle class="stroke-border-hairline" cx="24" cy="24" fill="transparent" r="20" stroke-width="4"></circle>
+<circle class="stroke-primary-container" cx="24" cy="24" fill="transparent" r="20" stroke-dasharray="125.6" stroke-dashoffset="50.24" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-[22px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-caption text-[11px] font-bold uppercase tracking-wider text-accent-tint-text bg-accent-tint px-2 py-0.5 rounded-full">Next to Unlock</span>
+</div>
+<h2 class="font-title-lg text-[15px] font-bold text-text-primary truncate">10-Day Streak</h2>
+<p class="font-caption text-caption text-text-secondary">6 of 10 days (60%) • 4 days left</p>
+</div>
+</div>
+</section>
+<!-- Grid Header -->
+<div class="flex items-center justify-between pt-1">
+<h3 class="font-headline-hero text-[18px] text-text-primary">All Milestones</h3>
+<span class="font-caption text-caption text-text-tertiary">7 Earned · 5 In Progress</span>
+</div>
+<!-- Badge Medallion Grid (3 columns) -->
+<section class="grid grid-cols-3 gap-x-3 gap-y-5 pb-6">
+<!-- BADGE 1: First Story (Earned) -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border-2 border-cat-sounds-bg shadow-sm flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-cat-stories-bg flex items-center justify-center text-cat-stories-text border border-amber-200">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-success-text text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-semibold text-text-primary mt-2 leading-tight">First Story</span>
+<span class="font-caption text-[11px] text-success-text font-medium mt-0.5">Earned</span>
+</div>
+<!-- BADGE 2: Sound Explorer (Earned - Using provided image asset https://lh3.googleusercontent.com/aida/AEtjO1X3b0E8JEXkk1kSdXy-LwKluxDKgyIzN9rdalxbBtQRk8lRrV1zGdwZYN-0FCKciqihRmKxYTFrNUy8ZZTObAxmF40R-PAFiGeZvm1xbj-1nO77j3ZYKS2xjkxoMnWi5kFjCCLgA5i1tjG0DaagNJnuEdPQYaS2eRitwpUt-59s8Khw5H3UdE9REgXIonZP6gju2i_zj4iHeEAyMfA8i9jqR3PgP080euezPkf9LGCXZvE3nL4UoFWWLw) -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border-2 border-support-tint shadow-sm flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<img alt="Sound Explorer flat 2D badge" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1X3b0E8JEXkk1kSdXy-LwKluxDKgyIzN9rdalxbBtQRk8lRrV1zGdwZYN-0FCKciqihRmKxYTFrNUy8ZZTObAxmF40R-PAFiGeZvm1xbj-1nO77j3ZYKS2xjkxoMnWi5kFjCCLgA5i1tjG0DaagNJnuEdPQYaS2eRitwpUt-59s8Khw5H3UdE9REgXIonZP6gju2i_zj4iHeEAyMfA8i9jqR3PgP080euezPkf9LGCXZvE3nL4UoFWWLw"/>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-success-text text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-semibold text-text-primary mt-2 leading-tight">Sound Explorer</span>
+<span class="font-caption text-[11px] text-success-text font-medium mt-0.5">Earned</span>
+</div>
+<!-- BADGE 3: 3-Day Streak (Earned) -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border-2 border-cat-sounds-bg shadow-sm flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-cat-sounds-bg flex items-center justify-center text-primary-container border border-pink-200">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-success-text text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-semibold text-text-primary mt-2 leading-tight">3-Day Streak</span>
+<span class="font-caption text-[11px] text-success-text font-medium mt-0.5">Earned</span>
+</div>
+<!-- BADGE 4: Word Collector 25 (Earned) -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border-2 border-support-tint shadow-sm flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-support-tint flex items-center justify-center text-support-strong border border-purple-200 font-headline-hero text-[18px]">
+              ABC
+            </div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-success-text text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-semibold text-text-primary mt-2 leading-tight">Word Collector</span>
+<span class="font-caption text-[11px] text-success-text font-medium mt-0.5">25 words</span>
+</div>
+<!-- BADGE 5: Bookworm (Earned) -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border-2 border-cat-rhymes-bg shadow-sm flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-cat-rhymes-bg flex items-center justify-center text-cat-rhymes-text border border-emerald-200">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-success-text text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-semibold text-text-primary mt-2 leading-tight">Bookworm</span>
+<span class="font-caption text-[11px] text-success-text font-medium mt-0.5">5 books</span>
+</div>
+<!-- BADGE 6: Rhyme Time (Earned) -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border-2 border-amber-100 shadow-sm flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-cat-stories-bg flex items-center justify-center text-cat-stories-text border border-amber-200">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">music_note</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-success-text text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-semibold text-text-primary mt-2 leading-tight">Rhyme Time</span>
+<span class="font-caption text-[11px] text-success-text font-medium mt-0.5">Earned</span>
+</div>
+<!-- BADGE 7: Early Bird (Earned) -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border-2 border-amber-200 shadow-sm flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-200">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">wb_twilight</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-success-text text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-semibold text-text-primary mt-2 leading-tight">Early Bird</span>
+<span class="font-caption text-[11px] text-success-text font-medium mt-0.5">Earned</span>
+</div>
+<!-- BADGE 8: 10-Day Streak (Locked - with 60% Progress Ring) -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-0.5 bg-surface relative flex items-center justify-center active:scale-95 transition-transform duration-150">
+<!-- Circular Progress SVG -->
+<svg class="absolute inset-0 w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-border-hairline" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="60, 100" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+<div class="w-[58px] h-[58px] rounded-full bg-surface-alt flex items-center justify-center text-text-tertiary">
+<span class="material-symbols-outlined text-[26px]">local_fire_department</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-text-secondary text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-semibold text-text-secondary mt-2 leading-tight">10-Day Streak</span>
+<span class="font-caption text-[11px] text-primary-container font-semibold mt-0.5">6/10 days</span>
+</div>
+<!-- BADGE 9: Story Builder (Locked) -->
+<div class="flex flex-col items-center text-center opacity-85 group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border border-border-hairline flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-surface-alt flex items-center justify-center text-text-tertiary">
+<span class="material-symbols-outlined text-[28px]">extension</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-text-secondary text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-medium text-text-tertiary mt-2 leading-tight">Story Builder</span>
+<span class="font-caption text-[11px] text-text-tertiary mt-0.5">Locked</span>
+</div>
+<!-- BADGE 10: 50 Words (Locked) -->
+<div class="flex flex-col items-center text-center opacity-85 group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border border-border-hairline flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-surface-alt flex items-center justify-center text-text-tertiary">
+<span class="material-symbols-outlined text-[28px]">spellcheck</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-text-secondary text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-medium text-text-tertiary mt-2 leading-tight">50 Words</span>
+<span class="font-caption text-[11px] text-text-tertiary mt-0.5">Locked</span>
+</div>
+<!-- BADGE 11: Read Aloud Star (Locked) -->
+<div class="flex flex-col items-center text-center opacity-85 group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border border-border-hairline flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-surface-alt flex items-center justify-center text-text-tertiary">
+<span class="material-symbols-outlined text-[28px]">mic</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-text-secondary text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-medium text-text-tertiary mt-2 leading-tight">Read Aloud</span>
+<span class="font-caption text-[11px] text-text-tertiary mt-0.5">Locked</span>
+</div>
+<!-- BADGE 12: 30-Day Streak (Locked) -->
+<div class="flex flex-col items-center text-center opacity-85 group cursor-pointer">
+<div class="w-[72px] h-[72px] rounded-full p-1 bg-surface border border-border-hairline flex items-center justify-center relative active:scale-95 transition-transform duration-150">
+<div class="w-full h-full rounded-full bg-surface-alt flex items-center justify-center text-text-tertiary">
+<span class="material-symbols-outlined text-[28px]">military_tech</span>
+</div>
+<div class="absolute -bottom-1 -right-0.5 w-5 h-5 rounded-full bg-text-secondary text-surface flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+</div>
+</div>
+<span class="font-label text-[13px] font-medium text-text-tertiary mt-2 leading-tight">30-Day Streak</span>
+<span class="font-caption text-[11px] text-text-tertiary mt-0.5">Locked</span>
+</div>
+</section>
+<!-- Parent Prompt Card -->
+<section class="bg-support-tint rounded-[24px] p-4 flex gap-3.5 items-start mb-4 border border-purple-200/50">
+<div class="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-support-tint-text shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">family_restroom</span>
+</div>
+<div class="flex-1">
+<span class="font-caption text-[11px] font-bold text-support-tint-text uppercase tracking-wider">Parent Tip</span>
+<p class="font-body text-[14px] leading-snug text-text-primary mt-0.5">
+            Celebrate Maya's milestone badges! Ask her to show you the story she liked most to earn the <strong class="font-semibold text-primary-container">First Story</strong> badge.
+          </p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar from Shared Components JSON -->
+<!-- Destination count: 4, labels: ["Today", "Library", "Progress", "Profile"] -->
+<!-- Progress tab is semantically ACTIVE -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter pt-2 pb-safe bg-surface dark:bg-surface-container border-t border-border-hairline dark:border-outline-variant shadow-sm dark:shadow-none">
+<!-- Tab 1: Today -->
+<button class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-4 py-1.5 min-w-[64px] min-h-[48px] hover:bg-surface-alt dark:hover:bg-surface-container-high transition-colors duration-200 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[24px]">calendar_today</span>
+<span class="font-caption text-caption mt-0.5">Today</span>
+</button>
+<!-- Tab 2: Library -->
+<button class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-4 py-1.5 min-w-[64px] min-h-[48px] hover:bg-surface-alt dark:hover:bg-surface-container-high transition-colors duration-200 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[24px]">local_library</span>
+<span class="font-caption text-caption mt-0.5">Library</span>
+</button>
+<!-- Tab 3: Progress (ACTIVE destination for Achievements) -->
+<button class="flex flex-col items-center justify-center bg-accent-tint dark:bg-primary-container text-accent-tint-text dark:text-on-primary rounded-full px-4 py-1.5 min-w-[64px] min-h-[48px] active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="font-caption text-caption font-bold mt-0.5">Progress</span>
+</button>
+<!-- Tab 4: Profile -->
+<button class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-4 py-1.5 min-w-[64px] min-h-[48px] hover:bg-surface-alt dark:hover:bg-surface-container-high transition-colors duration-200 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="font-caption text-caption mt-0.5">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

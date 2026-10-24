@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Hopscotch - Profile</title>
+<!-- Google Fonts: Sniglet (Headline Hero) & Varela Round (Reading, Body, UI) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom theme config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#b70071",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "cat-rhymes-bg": "#DDF5EA",
+            "success-bg": "#E3F4E9",
+            "background": "#FCF4F9",
+            "accent": "#FC69C3",
+            "on-surface": "#26171d",
+            "on-surface-variant": "#584049",
+            "success-text": "#0E7C3A",
+            "danger-text": "#CE2020",
+            "on-secondary-container": "#453387",
+            "on-primary-fixed": "#3d0023",
+            "inverse-primary": "#ffb0cf",
+            "primary": "#9f0062",
+            "on-tertiary": "#ffffff",
+            "support-strong": "#9880FA",
+            "error": "#ba1a1a",
+            "secondary-container": "#b3a1fd",
+            "on-tertiary-fixed": "#022100",
+            "secondary-fixed-dim": "#cbbeff",
+            "border-control": "#B682AE",
+            "text-primary": "#1F0C18",
+            "cat-stories-bg": "#FFEBDD",
+            "secondary": "#6251a7",
+            "cat-reading-text": "#4B3A9C",
+            "on-tertiary-container": "#a9ff8d",
+            "danger-bg": "#FBE5E5",
+            "surface-container-highest": "#f6dce4",
+            "on-primary-container": "#ffe3eb",
+            "text-tertiary": "#7A6673",
+            "surface-container-low": "#fff0f3",
+            "border-hairline": "#EED9E6",
+            "surface-alt": "#F8E9F2",
+            "tertiary-container": "#177a00",
+            "secondary-fixed": "#e7deff",
+            "on-primary-fixed-variant": "#8c0056",
+            "cat-sounds-bg": "#FEE3F3",
+            "text-secondary": "#5E4A57",
+            "warning-text": "#A75906",
+            "surface-container": "#ffe8ee",
+            "tertiary": "#105e00",
+            "support-tint": "#EEE9FE",
+            "error-container": "#ffdad6",
+            "cat-rhymes-text": "#166534",
+            "tertiary-fixed-dim": "#7cdd61",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#ffecf1",
+            "on-secondary-fixed-variant": "#4a388d",
+            "cat-sounds-text": "#8F0459",
+            "accent-tint-text": "#8F0459",
+            "surface": "#FFFFFF",
+            "primary-fixed-dim": "#ffb0cf",
+            "on-secondary-fixed": "#1e0061",
+            "surface-dim": "#eed3db",
+            "tertiary-fixed": "#97fa7a",
+            "on-background": "#26171d",
+            "primary-fixed": "#ffd9e5",
+            "accent-tint": "#FEE3F3",
+            "cat-reading-bg": "#EEE9FE",
+            "inverse-surface": "#3c2c32",
+            "surface-bright": "#fff8f8",
+            "on-error-container": "#93000a",
+            "surface-variant": "#f6dce4",
+            "accent-pressed": "#C2037A",
+            "on-tertiary-fixed-variant": "#0d5300",
+            "support-tint-text": "#4B3A9C",
+            "on-secondary": "#ffffff",
+            "surface-container-high": "#fce1e9",
+            "outline": "#8c6f79",
+            "cat-stories-text": "#8A3F00",
+            "primary-container": "#ca047e",
+            "outline-variant": "#e0bec9",
+            "warning-bg": "#FAEFE1"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "card": "1.5rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "boxShadow": {
+            "soft": "0 1px 2px rgba(31,12,24,.04), 0 8px 24px rgba(31,12,24,.06)",
+            "elevated": "0 4px 16px rgba(31,12,24,.08)"
+          },
+          "spacing": {
+            "space-xl": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "0.75rem",
+            "space-2xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1rem",
+            "margin": "1.25rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "reading-child": ["Varela Round", "sans-serif"],
+            "caption": ["Varela Round", "sans-serif"],
+            "title-lg": ["Varela Round", "sans-serif"],
+            "label": ["Varela Round", "sans-serif"],
+            "headline-hero": ["Sniglet", "cursive"],
+            "body": ["Varela Round", "sans-serif"]
+          },
+          "fontSize": {
+            "reading-child": ["28px", { "lineHeight": "1.4", "fontWeight": "400" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-hero": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .material-symbols-filled {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center selection:bg-accent-tint selection:text-cat-sounds-text">
+<!-- Main Mobile Frame Container (iPhone 393 x 852 target) -->
+<div class="w-full max-w-[420px] bg-background min-h-screen flex flex-col relative pb-28">
+<!-- Top App Bar / Header -->
+<header class="sticky top-0 z-40 bg-background/95 backdrop-blur-md px-margin pt-10 pb-3 flex justify-between items-center transition-all">
+<div class="flex items-center space-x-2">
+<h1 class="font-headline-hero text-headline-hero text-primary tracking-tight">Profile</h1>
+</div>
+<!-- Subtle parent lock/shield indicator -->
+<div class="flex items-center space-x-1.5 bg-surface rounded-full px-3 py-1.5 shadow-sm border border-border-hairline">
+<span class="material-symbols-outlined text-cat-reading-text text-[18px]">verified_user</span>
+<span class="font-caption text-caption text-text-secondary">Parent</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin space-y-6 pt-1">
+<!-- Parent Gate / Status Notice -->
+<div class="bg-support-tint rounded-card p-4 border border-border-hairline/60 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-support-tint-text shadow-sm">
+<span class="material-symbols-outlined text-[20px]">lock_open</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-label text-label text-support-tint-text font-bold">Parent area</span>
+<span class="inline-block w-2 h-2 rounded-full bg-success-text"></span>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-0.5">Settings are unlocked for adults</p>
+</div>
+</div>
+<button aria-label="Security options" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface/60 transition-colors text-support-tint-text active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Section: Children Reading Profiles -->
+<section class="space-y-3">
+<div class="flex justify-between items-center px-1">
+<h2 class="font-title-lg text-title-lg text-text-primary">Reading profiles</h2>
+<span class="font-caption text-caption text-text-tertiary">1 child active</span>
+</div>
+<!-- Primary Child Card (Maya) -->
+<div class="bg-surface rounded-card p-4 shadow-soft border border-border-hairline flex items-center justify-between transition-transform active:scale-[0.99]">
+<div class="flex items-center space-x-3.5">
+<div class="relative">
+<img alt="Maya's avatar" class="w-16 h-16 rounded-full object-cover ring-2 ring-accent-tint shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XRbyJId9qINRerAadbCiYziCpZEi5Urnk3vPkkptF4LabHuTz9hcXRx4-0XGlO6b3TtItaTGpuCOW5PXVk7Us2ElPMV0VYuxHN-mNsV9SQf9FEzVlDIIdG-iCdovpru0tXtjpUF5U80dw8UaPy6r2FEwrP58uCP2xXMnYWnQV9YaFC6J-5bDrrv9rCrLDiW0sl95OfFAGbjD_8h-gCOU8GHl2sCj-7n2upKw4eeAl8djAMF3tcp86xtw"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-success-text border-2 border-surface"></span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<h3 class="font-title-lg text-title-lg text-text-primary">Maya</h3>
+<span class="bg-cat-sounds-bg text-cat-sounds-text font-caption text-caption px-2 py-0.5 rounded-full">Age 5</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-cat-sounds-text">auto_stories</span>
+                Level 1 · Just starting
+              </p>
+</div>
+</div>
+<button aria-label="Edit Maya's profile" class="h-12 w-12 flex items-center justify-center rounded-full hover:bg-surface-alt transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-text-secondary">edit</span>
+</button>
+</div>
+<!-- Add Another Child Button Row -->
+<button class="w-full min-h-[52px] rounded-card border-2 border-dashed border-border-control/60 bg-surface/50 hover:bg-surface transition-all flex items-center justify-center space-x-2 py-3 active:scale-95" type="button">
+<span class="material-symbols-outlined text-primary-container text-[20px]">add_circle</span>
+<span class="font-label text-label text-text-primary font-medium">Add another child</span>
+</button>
+</section>
+<!-- Section: Reading Preferences -->
+<section class="space-y-3">
+<div class="px-1">
+<h2 class="font-caption text-caption font-bold tracking-wider uppercase text-text-secondary">Reading preferences</h2>
+</div>
+<div class="bg-surface rounded-card shadow-soft border border-border-hairline overflow-hidden divide-y divide-border-hairline">
+<!-- Daily Reminder -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-alt/40 transition-colors cursor-pointer min-h-[56px]">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-cat-sounds-bg flex items-center justify-center text-cat-sounds-text flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div>
+<p class="font-label text-label text-text-primary">Daily reading reminder</p>
+<p class="font-caption text-caption text-text-secondary">7:00 PM after dinner</p>
+</div>
+</div>
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-text-tertiary">chevron_right</span>
+</div>
+</div>
+<!-- Reading Voice -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-alt/40 transition-colors cursor-pointer min-h-[56px]">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-cat-reading-bg flex items-center justify-center text-cat-reading-text flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">record_voice_over</span>
+</div>
+<div>
+<p class="font-label text-label text-text-primary">Reading voice</p>
+<p class="font-caption text-caption text-text-secondary">Warm narrator</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-text-tertiary">chevron_right</span>
+</div>
+</div>
+<!-- Playback Speed -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-alt/40 transition-colors cursor-pointer min-h-[56px]">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-cat-stories-bg flex items-center justify-center text-cat-stories-text flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+<div>
+<p class="font-label text-label text-text-primary">Playback speed</p>
+<p class="font-caption text-caption text-text-secondary">Paced for early learners</p>
+</div>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="bg-accent-tint text-cat-sounds-text font-caption text-caption font-bold px-2.5 py-1 rounded-full">0.8x</span>
+<span class="material-symbols-outlined text-text-tertiary">chevron_right</span>
+</div>
+</div>
+<!-- Offline Download Toggle -->
+<div class="flex items-center justify-between p-4 min-h-[56px]">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-cat-rhymes-bg flex items-center justify-center text-cat-rhymes-text flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">cloud_download</span>
+</div>
+<div>
+<p class="font-label text-label text-text-primary">Download for offline</p>
+<p class="font-caption text-caption text-text-secondary">Wi-Fi only</p>
+</div>
+</div>
+<!-- Custom Pill Switch (Active: #CA047E) -->
+<button aria-checked="true" class="w-12 h-7 bg-primary-container rounded-full p-1 transition-colors duration-200 ease-in-out focus:outline-none flex items-center active:scale-95" onclick="this.setAttribute('aria-checked', this.getAttribute('aria-checked') === 'true' ? 'false' : 'true'); this.classList.toggle('bg-primary-container'); this.classList.toggle('bg-surface-dim'); this.querySelector('.switch-thumb').classList.toggle('translate-x-5');" role="switch" type="button">
+<div class="switch-thumb w-5 h-5 bg-white rounded-full shadow-md transform translate-x-5 transition-transform duration-200 ease-in-out"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- Section: Support & Account -->
+<section class="space-y-3">
+<div class="px-1">
+<h2 class="font-caption text-caption font-bold tracking-wider uppercase text-text-secondary">Account &amp; App</h2>
+</div>
+<div class="bg-surface rounded-card shadow-soft border border-border-hairline overflow-hidden divide-y divide-border-hairline">
+<!-- Parent Account Email -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-alt/40 transition-colors cursor-pointer min-h-[56px]">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-surface-alt flex items-center justify-center text-text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div>
+<p class="font-label text-label text-text-primary">Parent account</p>
+<p class="font-caption text-caption text-text-secondary truncate max-w-[190px]">jenna.parker@email.com</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-tertiary">chevron_right</span>
+</div>
+<!-- Help & Tips -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-alt/40 transition-colors cursor-pointer min-h-[56px]">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-surface-alt flex items-center justify-center text-text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+</div>
+<p class="font-label text-label text-text-primary">Help and reading tips</p>
+</div>
+<span class="material-symbols-outlined text-text-tertiary">chevron_right</span>
+</div>
+<!-- Privacy & Data -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-alt/40 transition-colors cursor-pointer min-h-[56px]">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-surface-alt flex items-center justify-center text-text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">privacy_tip</span>
+</div>
+<p class="font-label text-label text-text-primary">Privacy and safety</p>
+</div>
+<span class="material-symbols-outlined text-text-tertiary">chevron_right</span>
+</div>
+</div>
+<!-- Sign Out Action -->
+<div class="pt-2 flex flex-col items-center space-y-3">
+<button class="w-full min-h-[48px] py-3 rounded-full text-danger-text font-label text-label hover:bg-danger-bg/50 transition-colors flex items-center justify-center space-x-1.5 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+<span>Sign out</span>
+</button>
+<p class="font-caption text-caption text-text-tertiary text-center">
+            Hopscotch v2.4.0 · Made for joyful early readers
+          </p>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Faithful to Shared Components JSON & Destination Hierarchy) -->
+<!-- Destination count: 4, ordered: Today, Library, Progress, Profile. Profile is actively selected -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter pt-2 pb-safe bg-surface shadow-sm border-t border-border-hairline">
+<!-- Tab 1: Today -->
+<a class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:bg-surface-alt transition-colors active:scale-95" href="#today">
+<span class="material-symbols-outlined text-[22px]">calendar_today</span>
+<span class="font-caption text-caption mt-0.5">Today</span>
+</a>
+<!-- Tab 2: Library -->
+<a class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:bg-surface-alt transition-colors active:scale-95" href="#library">
+<span class="material-symbols-outlined text-[22px]">local_library</span>
+<span class="font-caption text-caption mt-0.5">Library</span>
+</a>
+<!-- Tab 3: Progress -->
+<a class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:bg-surface-alt transition-colors active:scale-95" href="#progress">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+<span class="font-caption text-caption mt-0.5">Progress</span>
+</a>
+<!-- Tab 4: Profile (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-accent-tint text-primary-container rounded-full px-4 py-1.5 hover:bg-surface-alt transition-colors active:scale-95" href="#profile">
+<span class="material-symbols-filled text-[22px]">person</span>
+<span class="font-caption text-caption font-bold mt-0.5">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

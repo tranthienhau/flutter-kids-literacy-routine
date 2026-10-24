@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hopscotch - Today Completed</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "warning-text": "#A75906",
+            "outline": "#8c6f79",
+            "on-primary-fixed": "#3d0023",
+            "on-secondary-fixed-variant": "#4a388d",
+            "cat-rhymes-text": "#166534",
+            "on-surface": "#26171d",
+            "danger-text": "#CE2020",
+            "accent-pressed": "#C2037A",
+            "support-strong": "#9880FA",
+            "on-secondary": "#ffffff",
+            "cat-sounds-bg": "#FEE3F3",
+            "on-error-container": "#93000a",
+            "cat-sounds-text": "#8F0459",
+            "cat-reading-bg": "#EEE9FE",
+            "secondary-fixed-dim": "#cbbeff",
+            "tertiary-fixed-dim": "#7cdd61",
+            "surface-container": "#ffe8ee",
+            "surface-container-high": "#fce1e9",
+            "on-tertiary-container": "#a9ff8d",
+            "cat-stories-bg": "#FFEBDD",
+            "surface-alt": "#F8E9F2",
+            "inverse-surface": "#3c2c32",
+            "surface": "#FFFFFF",
+            "accent-tint": "#FEE3F3",
+            "danger-bg": "#FBE5E5",
+            "tertiary-container": "#177a00",
+            "surface-variant": "#f6dce4",
+            "background": "#FCF4F9",
+            "on-primary": "#ffffff",
+            "surface-tint": "#b70071",
+            "on-surface-variant": "#584049",
+            "on-error": "#ffffff",
+            "cat-stories-text": "#8A3F00",
+            "on-tertiary-fixed": "#022100",
+            "accent": "#FC69C3",
+            "tertiary-fixed": "#97fa7a",
+            "on-primary-fixed-variant": "#8c0056",
+            "on-background": "#26171d",
+            "surface-container-low": "#fff0f3",
+            "support-tint": "#EEE9FE",
+            "on-secondary-fixed": "#1e0061",
+            "on-secondary-container": "#453387",
+            "secondary-container": "#b3a1fd",
+            "primary-container": "#ca047e",
+            "text-secondary": "#5E4A57",
+            "on-tertiary-fixed-variant": "#0d5300",
+            "surface-dim": "#eed3db",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fff8f8",
+            "border-control": "#B682AE",
+            "inverse-on-surface": "#ffecf1",
+            "success-bg": "#E3F4E9",
+            "cat-rhymes-bg": "#DDF5EA",
+            "success-text": "#0E7C3A",
+            "inverse-primary": "#ffb0cf",
+            "accent-tint-text": "#8F0459",
+            "on-primary-container": "#ffe3eb",
+            "cat-reading-text": "#4B3A9C",
+            "warning-bg": "#FAEFE1",
+            "surface-container-highest": "#f6dce4",
+            "support-tint-text": "#4B3A9C",
+            "primary-fixed": "#ffd9e5",
+            "outline-variant": "#e0bec9",
+            "primary-fixed-dim": "#ffb0cf",
+            "primary": "#9f0062",
+            "text-tertiary": "#7A6673",
+            "text-primary": "#1F0C18",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#e7deff",
+            "border-hairline": "#EED9E6",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "tertiary": "#105e00",
+            "secondary": "#6251a7"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-2xl": "2rem",
+            "margin": "1.25rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "space-md": "0.75rem",
+            "space-lg": "1rem"
+          },
+          "fontFamily": {
+            "title-lg": ["Varela Round"],
+            "body": ["Varela Round"],
+            "label": ["Varela Round"],
+            "headline-hero": ["Sniglet"],
+            "caption": ["Varela Round"],
+            "reading-child": ["Varela Round"]
+          },
+          "fontSize": {
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-hero": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "reading-child": ["28px", { "lineHeight": "1.4", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .card-shadow-soft {
+      box-shadow: 0 1px 2px rgba(31, 12, 24, 0.04), 0 8px 24px rgba(31, 12, 24, 0.06);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary min-h-screen flex justify-center selection:bg-accent-tint selection:text-cat-sounds-text">
+<!-- Mobile Viewport Frame (393px iPhone layout centered) -->
+<main class="w-full max-w-[393px] min-h-screen bg-background flex flex-col relative pb-[90px]">
+<!-- Shared Component: TopAppBar -->
+<header class="flex justify-between items-center w-full px-margin pt-12 pb-3 min-h-[56px] bg-background">
+<!-- Leading: Maya's Avatar & Greeting -->
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Maya's avatar" class="w-11 h-11 rounded-full object-cover border-2 border-surface shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XRbyJId9qINRerAadbCiYziCpZEi5Urnk3vPkkptF4LabHuTz9hcXRx4-0XGlO6b3TtItaTGpuCOW5PXVk7Us2ElPMV0VYuxHN-mNsV9SQf9FEzVlDIIdG-iCdovpru0tXtjpUF5U80dw8UaPy6r2FEwrP58uCP2xXMnYWnQV9YaFC6J-5bDrrv9rCrLDiW0sl95OfFAGbjD_8h-gCOU8GHl2sCj-7n2upKw4eeAl8djAMF3tcp86xtw"/>
+<!-- Active status indicator dot -->
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-success-text border-2 border-surface rounded-full"></span>
+</div>
+<div class="flex flex-col">
+<span class="text-[11px] font-bold text-text-tertiary tracking-wider font-label uppercase">Reading with</span>
+<h1 class="font-title-lg text-title-lg text-text-primary leading-tight">Good evening, Maya</h1>
+</div>
+</div>
+<!-- Trailing: Streak Chip -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-accent-tint rounded-full border border-border-hairline shadow-sm active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-primary-container fill-icon text-[18px]">local_fire_department</span>
+<span class="font-label text-[13px] font-bold text-primary-container">7 days</span>
+</div>
+</header>
+<!-- Main Content Area: Completed Routine / Today Empty State -->
+<div class="flex-1 px-margin pt-2 flex flex-col gap-5">
+<!-- Celebration Hero Card -->
+<section class="bg-surface rounded-[24px] p-4 card-shadow-soft border border-border-hairline flex flex-col">
+<!-- Photographic Visual (Maya finishing reading routine) -->
+<div class="relative w-full aspect-[4/3] rounded-[18px] overflow-hidden bg-surface-variant mb-4">
+<img alt="Maya happily closing her storybook" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIaOS1yJ5nw3O4UMLzgjOAmdgj7pdI6BNwXVZO1DTwJCzPKAt2K3a2KISA9Nwkff-iHsbeCeHd9U7fQgk5zCJI9-JB6T4oGS8JY-ixH_klIr-xFYYEZqZkP5C6Kfc668XeaC4gHW9GsPmmDXys8NmKKrVxH4xr9x6xnD7RnljaJ3K0oX5uIXXzCFO3jBRJPaa-jT2C-LDsJeGNaMDF9HH1P91UWgRmIxlUz_SrTHy8x-cGrFgTr2XJ70L9FaUgBwK15bYwgSIl_g"/>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-success-text fill-icon text-[16px]">check_circle</span>
+<span class="font-caption text-caption text-success-text font-bold">Routine Complete</span>
+</div>
+</div>
+<!-- Headline & Supportive Narrative -->
+<div class="text-center px-2">
+<h2 class="font-headline-hero text-[28px] leading-8 text-text-primary mb-2">
+            All done for today!
+          </h2>
+<p class="font-body text-body text-text-secondary leading-relaxed">
+            Maya finished 4 activities. Come back tomorrow to keep the 7-day streak going.
+          </p>
+</div>
+<!-- Session Highlights: Stat Pills Row -->
+<div class="flex items-center justify-center gap-2.5 mt-5">
+<!-- Time stat -->
+<div class="flex items-center gap-1.5 px-3.5 py-2 bg-support-tint rounded-full">
+<span class="material-symbols-outlined text-support-tint-text text-[18px]">schedule</span>
+<span class="font-caption text-caption font-semibold text-support-tint-text">12 min read</span>
+</div>
+<!-- Vocabulary stat -->
+<div class="flex items-center gap-1.5 px-3.5 py-2 bg-accent-tint rounded-full">
+<span class="material-symbols-outlined text-accent-tint-text fill-icon text-[18px]">auto_stories</span>
+<span class="font-caption text-caption font-semibold text-accent-tint-text">3 new words</span>
+</div>
+</div>
+</section>
+<!-- Parent Prompt / Reassurance Card -->
+<section class="bg-support-tint rounded-[20px] p-4 border border-support-strong/20 flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs text-cat-reading-text">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<div>
+<span class="text-[11px] font-bold text-cat-reading-text tracking-wide uppercase">Parent Tip</span>
+<p class="font-body text-[14px] text-text-primary leading-snug mt-0.5">
+            Ask Maya what Oliver’s favorite animal was in today's story to practice gentle recall.
+          </p>
+</div>
+</section>
+<!-- Action Button Group -->
+<div class="flex flex-col gap-3 mt-1 mb-2">
+<!-- Primary Button: Bonus Activity -->
+<button class="w-full h-14 bg-primary-container text-white font-title-lg text-[17px] font-semibold rounded-full flex items-center justify-center gap-2 shadow-sm hover:opacity-95 active:bg-accent-pressed active:scale-[0.99] transition-all min-h-[48px]" type="button">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+<span>Read a bonus story</span>
+</button>
+<!-- Secondary Button: See Progress -->
+<button class="w-full h-[52px] bg-surface border-[1.5px] border-border-control text-text-primary font-title-lg text-[16px] font-semibold rounded-full flex items-center justify-center gap-2 hover:bg-surface-alt active:scale-[0.99] transition-all min-h-[48px]" type="button">
+<span>See progress</span>
+<span class="material-symbols-outlined text-[18px] text-text-secondary">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Shared Component: BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter pt-2 pb-6 bg-surface border-t border-border-hairline shadow-sm max-w-[393px] mx-auto right-0">
+<!-- 1. Today (Active Navigation State) -->
+<button aria-label="Today" class="flex flex-col items-center justify-center bg-accent-tint text-primary-container rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150 min-w-[64px]" type="button">
+<span class="material-symbols-outlined text-[22px] fill-icon text-primary-container">calendar_today</span>
+<span class="font-caption text-caption font-bold text-primary-container mt-0.5">Today</span>
+</button>
+<!-- 2. Library (Inactive) -->
+<button aria-label="Library" class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:bg-surface-alt rounded-full transition-colors active:scale-95 duration-150 min-w-[64px]" type="button">
+<span class="material-symbols-outlined text-[22px] text-text-secondary">local_library</span>
+<span class="font-caption text-caption text-text-secondary mt-0.5">Library</span>
+</button>
+<!-- 3. Progress (Inactive) -->
+<button aria-label="Progress" class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:bg-surface-alt rounded-full transition-colors active:scale-95 duration-150 min-w-[64px]" type="button">
+<span class="material-symbols-outlined text-[22px] text-text-secondary">trending_up</span>
+<span class="font-caption text-caption text-text-secondary mt-0.5">Progress</span>
+</button>
+<!-- 4. Profile (Inactive) -->
+<button aria-label="Profile" class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:bg-surface-alt rounded-full transition-colors active:scale-95 duration-150 min-w-[64px]" type="button">
+<span class="material-symbols-outlined text-[22px] text-text-secondary">person</span>
+<span class="font-caption text-caption text-text-secondary mt-0.5">Profile</span>
+</button>
+</nav>
+</main>
+</body></html>

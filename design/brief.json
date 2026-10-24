@@ -1,0 +1,391 @@
+{
+  "title": "Hopscotch",
+  "slug": "hopscotch-literacy",
+  "domain": "kids",
+  "style": "bright",
+  "allow3D": false,
+  "bannedTerms": [
+    "Classroom",
+    "Teacher dashboard",
+    "Ads",
+    "Chat with strangers",
+    "Grades",
+    "Test score"
+  ],
+  "features": [
+    "Personalized daily homepage with a curated set of short parent + child literacy activities",
+    "Interactive text screens: tap a highlighted word to hear its individual sounds",
+    "Audio-paired reading passages with guided prompts for the parent",
+    "Paginated illustrated storybook reader with per-page parent coaching",
+    "Progress dashboard with streaks, category progress and achievement milestones",
+    "Browsable content library with filtering by category, skill and length",
+    "All content rendered from structured data (Firestore-ready models)",
+    "Parent gate before settings"
+  ],
+  "screenCount": 14,
+  "sharedComponents": {
+    "bottomTabBar": {
+      "tabs": [
+        "Today",
+        "Library",
+        "Progress",
+        "Profile"
+      ],
+      "note": "Today = sun icon, Library = book-open icon, Progress = trophy icon, Profile = user-round icon. Rounded outline 24px icons. Active tab: icon + label in #CA047E with a soft pink #FEE3F3 pill behind the icon; inactive tabs #5E4A57. Flat white bar, hairline top border #EED9E6, safe-area bottom inset."
+    },
+    "statusBar": "Top header: on Today a round real-photo avatar of the child Maya (age 5) with 'Maya' name and a streak flame chip '6 days'. Pushed activity screens show a left close X, a thin pink progress bar and step '2 of 4'.",
+    "controls": "Primary button: pill, #CA047E fill, white label, 56px tall (pressed #C2037A, disabled 40% opacity). Secondary button: white, 1.5px #B682AE border, #1F0C18 label. Text input: 12px radius, white, border #B682AE, focus ring #CA047E 2px, error #DC2626. Card: 24px radius, white, soft shadow. Chip: pill, #FEE3F3 fill, #8F0459 text. Category chips: Sounds = pink tint #FEE3F3 / #8F0459, Reading = lavender tint #EEE9FE / #4B3A9C, Stories = peach tint #FFEBDD / #8A3F00, Rhymes = mint tint #DDF5EA / #166534. Highlighted tappable word: pink #FEE3F3 rounded pill behind the word with #8F0459 bold text and a small speaker icon."
+  },
+  "screens": [
+    {
+      "name": "welcome",
+      "purpose": "Parent meets Hopscotch: 5 minutes a day of reading practice together",
+      "content": "Top 55%: real photo of a mother and young daughter (age 5) reading a picture book together on a cozy sofa, warm daylight. Monogram H mark. Heading 'Five minutes a day, reading together'. Body 'Short, playful activities you and your child do side by side. No screen time alone.' Primary 'Get started' pill, secondary 'I already have an account'. Page dots 1 of 3.",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "child-setup",
+      "purpose": "Parent adds the child's name, age and reading stage",
+      "content": "Back chevron, step '2 of 3'. Heading 'Who is reading with you?'. Real photo avatar picker row of 4 kid-friendly avatars (child faces). Input 'Child's name' = Maya. Age chips 3, 4, 5 (selected), 6, 7. Reading stage cards with radio: 'Just starting - learning letter sounds' (selected), 'Blending - sounding out short words', 'Reading - simple sentences'. Daily reminder time row '7:00 PM after dinner'. Primary 'Build Maya's routine'.",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "today",
+      "purpose": "Daily homepage: today's curated routine of short activities",
+      "content": "Header 'Good evening, Maya' with avatar and streak chip '6 days'. Focal hero card with pink-to-lavender gradient (white text on #CA047E to #6A4FD8 stops): 'Today's routine', '4 activities - about 12 min', ring '1 of 4 done', primary white pill 'Continue'. List of 4 activity cards each with a real photo thumbnail, category chip, title, minutes and status: 1 'Letter sound: short a' Sounds 3 min (done check), 2 'Tap the words: The cat sat' Sounds 3 min (next), 3 'Read along: A Map for Sam' Reading 4 min, 4 'Story time: Pip Finds a Hat' Stories 5 min. Small parent tip card 'Tip: let Maya tap first, then repeat the sound together.'",
+      "group": "core",
+      "nav": "Today",
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "name": "today-empty",
+      "purpose": "Routine finished for the day",
+      "content": "Header same. Real photo of a child happily closing a picture book on a rug, warm light. Heading 'All done for today!'. Body 'Maya finished 4 activities. Come back tomorrow to keep the 7-day streak going.' Stat pills '12 min read', '3 new words'. Primary 'Read a bonus story', secondary 'See progress'.",
+      "group": "core",
+      "nav": "Today",
+      "states": [
+        "empty"
+      ]
+    },
+    {
+      "name": "tap-words",
+      "purpose": "Interactive text: child taps highlighted words to hear each sound",
+      "content": "Close X, progress bar 2 of 4. Category chip Sounds. Instruction 'Tap a pink word to hear it'. Large text card with sentence in 32px rounded type: 'The cat sat on a mat.' where 'cat', 'sat', 'mat' are highlighted pink pills with speaker icons; 'cat' is in active playing state with a pulsing ring. Below: sound breakdown row for 'cat' showing three letter tiles c / a / t each with a small speaker, middle tile 'a' highlighted. Parent prompt card with lavender tint: 'Parent: point to each letter as you say it. Ask, what sound does a make?'. Bottom: big circular play button 'Hear the whole sentence', primary 'Next'.",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "read-along",
+      "purpose": "Audio-paired reading passage with guided parent prompts",
+      "content": "Close X, progress 3 of 4, chip Reading. Title 'A Map for Sam'. Real photo of a boy holding a hand-drawn treasure map in a backyard. Passage card with 4 short lines: 'Sam has a map. The map is red. Sam and Dad go to the big tree. Is the hat in the tree?' with the current line highlighted in pink tint (karaoke style) and the current word bold. Audio player bar: play/pause, 0:18 / 0:42 scrubber, speed chip 0.8x, replay. Parent prompt card: 'Pause here. Ask Maya: where do you think the hat is?' with 'Got it' link. Primary 'Next'.",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "storybook",
+      "purpose": "Paginated illustrated storybook reader with per-page coaching",
+      "content": "Top: close X, title 'Pip Finds a Hat', page indicator 'Page 3 of 8'. Large full-width flat 2D vector illustration of a small brown puppy finding a red hat under a bush in a sunny garden. Story text below in 24px: 'Pip sees a red hat. Is it a big hat? No, it is a little hat!'. Coaching card pinned at bottom with lavender tint: 'Coach tip - Point to the word hat. Ask Maya to find it again on this page.' Page controls: left arrow, 8 page dots with 3 active, right arrow, read-aloud speaker toggle.",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "activity-complete",
+      "purpose": "Celebration after finishing an activity",
+      "content": "Soft pink-to-lavender gradient background (decoration only, text on white card). Real photo of a smiling child giving a high five to a parent. White card: heading 'Great reading, Maya!', 3 star row filled, stats 'New words: cat, sat, mat', 'Time 3 min'. Badge earned chip 'Sound Explorer'. Primary 'Next activity', secondary 'Back to today'.",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "progress",
+      "purpose": "Progress dashboard: streak, category progress, milestones",
+      "content": "Header 'Maya's progress'. Focal streak card: big number '6' day streak with flame icon, week row M T W T F S S with 6 filled pink dots and today ring. Stats tiles: 'Minutes this week 64', 'Words learned 38', 'Stories read 5'. Section 'Skills': 4 category progress bars - Sounds 72%, Reading 45%, Stories 60%, Rhymes 30% each with its category color. Section 'Next milestone': card '10-day streak - 4 days to go' with progress bar. Link 'See all achievements'.",
+      "group": "core",
+      "nav": "Progress",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "achievements",
+      "purpose": "Achievement milestones grid",
+      "content": "Back chevron, title 'Achievements', '7 of 18 earned'. Grid 3 columns of round flat 2D badge medallions with labels: First Story (earned), Sound Explorer (earned), 3-Day Streak (earned), Word Collector 25 (earned), Bookworm 5 stories (earned), Rhyme Time (earned), Early Bird (earned), 10-Day Streak (locked, 60%), Story Builder (locked), 50 Words (locked), Read Aloud Star (locked), 30-Day Streak (locked). Locked badges greyed with a lock and progress ring.",
+      "group": "detail",
+      "nav": "Progress",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "library",
+      "purpose": "Browse content library with filters",
+      "content": "Header 'Library', search field 'Search stories, sounds, words'. Category chip row: All (selected), Sounds, Reading, Stories, Rhymes. Filter button with badge '2'. Featured row 'New this week' horizontal cards with real photo covers. Grid 2 columns of content cards each with real photo cover, category chip, title, length, level: 'Pip Finds a Hat' Stories 5 min Level 1, 'Short a Sounds' Sounds 3 min, 'A Map for Sam' Reading 4 min, 'Rhyme with Cat' Rhymes 3 min, 'The Big Red Bus' Stories 6 min, 'Letter m Walk' Sounds 2 min.",
+      "group": "core",
+      "nav": "Library",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "library-filter",
+      "purpose": "Filter sheet over the library",
+      "content": "Dimmed library behind, bottom sheet with handle. Title 'Filter', 'Reset' link. Sections: Category chips (Stories, Reading selected), Skill chips (Letter sounds, Blending selected, Sight words, Rhyming), Length segmented control (Under 3 min, 3-5 min selected, 5+ min), Level chips Level 1 selected, Level 2, Level 3. Toggle 'Hide finished'. Primary 'Show 14 activities'.",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "story-detail",
+      "purpose": "Content detail before starting a story",
+      "content": "Hero flat 2D vector illustration cover of a puppy with a red hat, back chevron, favorite heart. Title 'Pip Finds a Hat', chips Stories, Level 1, 8 pages, 5 min. Description 'A curious puppy finds a little red hat. Practice short a and i words together.' Section 'Words to listen for' pill row: hat, big, sit, red. Section 'Before you read' parent tip card. Primary 'Start reading', secondary 'Listen first'.",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "profile",
+      "purpose": "Parent area behind a parent gate: child profile, reminders, settings",
+      "content": "Header 'Profile'. Child card with real photo avatar Maya, age 5, 'Just starting', edit link, plus 'Add another child' row. Parent gate notice chip 'Parent area - unlocked'. Settings list rows with icons: Daily reminder 7:00 PM, Reading voice 'Warm narrator', Playback speed 0.8x, Download for offline (Wi-Fi only toggle on), Privacy and data, Help and tips. Account email jenna.parker@email.com. Sign out link.",
+      "group": "settings",
+      "nav": "Profile",
+      "states": [
+        "default"
+      ]
+    }
+  ],
+  "designSystem": {
+    "variant": "P91",
+    "theme": "light",
+    "frame": "393x852 mobile, top inset 59px, bottom inset 34px",
+    "color": {
+      "background": "#FCF4F9",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#F8E9F2",
+      "accent": "#FC69C3",
+      "accentFill": "#CA047E",
+      "accentTint": "#FEE3F3",
+      "accentPressed": "#C2037A",
+      "support": "#B09EFA",
+      "text": {
+        "primary": "#1F0C18",
+        "secondary": "#5E4A57",
+        "tertiary": "#7A6673"
+      },
+      "border": "#EED9E6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "gradient": [
+        "#CA047E",
+        "#6A4FD8"
+      ],
+      "statusOn": {
+        "warning": {
+          "fg": "#A75906",
+          "tint": "#FAEFE1"
+        },
+        "success": {
+          "fg": "#0E7C3A",
+          "tint": "#E3F4E9"
+        },
+        "danger": {
+          "fg": "#CE2020",
+          "tint": "#FBE5E5"
+        },
+        "info": {
+          "fg": "#C5047B",
+          "tint": "#F9E1F0"
+        }
+      },
+      "supportStrong": "#9880FA",
+      "borderStrong": "#B682AE"
+    },
+    "type": {
+      "fontFamily": "Varela Round",
+      "displayFamily": "Sniglet",
+      "numeralFamily": "Varela Round",
+      "display": "32 / 700 / -0.01em",
+      "title": "20 / 600",
+      "body": "16 / 400",
+      "label": "14 / 500",
+      "caption": "13 / 500",
+      "minSize": "12px (13px chips and tags, 14px safety or legal text)",
+      "scaleRule": "Use only the 5 declared sizes (display, title, body, label, caption)."
+    },
+    "radius": {
+      "card": 24,
+      "control": 16,
+      "input": 12,
+      "pill": 999
+    },
+    "spacing": "8pt scale (4, 8, 12, 16, 24, 32); screen edge padding 20px",
+    "elevation": "card = 0 1px 2px rgba(31,12,24,.04) + 0 8px 24px rgba(31,12,24,.06)",
+    "icons": "Rounded outline (Lucide style), 24px, 1.75 stroke",
+    "a11y": "white labels on accentFill only; tap targets >= 48pt (kids + parents); text on gradient passes 4.5:1"
+  },
+  "tokenCheck": {
+    "results": [
+      {
+        "pair": "text.primary on background",
+        "ratio": 17.3,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.primary on surface",
+        "ratio": 18.68,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on background",
+        "ratio": 7.5,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on surface",
+        "ratio": 8.1,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on background",
+        "ratio": 4.89,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on surface",
+        "ratio": 5.28,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white label on accentFill (buttons)",
+        "ratio": 4.68,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "accentFill text on accentTint (chips, selected)",
+        "ratio": 3.9,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#CA047E",
+        "after": 4.57
+      },
+      {
+        "pair": "accentFill as link text on background",
+        "ratio": 5.08,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white on hero gradient (both stops)",
+        "ratio": 5.48,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "warning text on its tint and on surface",
+        "ratio": 2.81,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#A75906",
+        "after": 4.54
+      },
+      {
+        "pair": "success text on its tint and on surface",
+        "ratio": 2.89,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#0E7C3A",
+        "after": 4.64
+      },
+      {
+        "pair": "danger text on its tint and on surface",
+        "ratio": 4.01,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#CE2020",
+        "after": 4.53
+      },
+      {
+        "pair": "info text on its tint and on surface",
+        "ratio": 4.45,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#C5047B",
+        "after": 4.64
+      },
+      {
+        "pair": "support as chart line / icon on surface (non-text 3:1)",
+        "ratio": 2.3,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#9880FA",
+        "after": 3.09
+      },
+      {
+        "pair": "input / control border on surface (non-text 3:1)",
+        "ratio": 1.34,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#B682AE",
+        "after": 3.09
+      }
+    ],
+    "changed": {
+      "accentFill": {
+        "from": "#DE048A",
+        "to": "#CA047E"
+      }
+    },
+    "passed": true
+  }
+}
