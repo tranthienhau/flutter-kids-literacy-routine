@@ -1,0 +1,663 @@
+{
+  "version": 1,
+  "activities": [
+    {
+      "id": "letter-short-a",
+      "type": "letterSound",
+      "title": "Letter sound: short a",
+      "category": "sounds",
+      "minutes": 3,
+      "level": 1,
+      "skills": [
+        "letter-sounds"
+      ],
+      "cover": "assets/images/thumb-short-a.jpg",
+      "isNew": false,
+      "summary": "Meet the letter a and the sound it makes.",
+      "payload": {
+        "letter": "a",
+        "letterAudio": "assets/audio/phonemes/a.m4a",
+        "words": [
+          {
+            "text": "ant",
+            "audio": "assets/audio/words/ant.m4a"
+          },
+          {
+            "text": "apple",
+            "audio": "assets/audio/words/apple.m4a"
+          },
+          {
+            "text": "cat",
+            "audio": "assets/audio/words/cat.m4a"
+          }
+        ],
+        "parentPrompt": "Say the sound together, then hunt for one thing at home that starts with a."
+      }
+    },
+    {
+      "id": "tap-cat-sat",
+      "type": "tapWords",
+      "title": "Tap the words: The cat sat",
+      "category": "sounds",
+      "minutes": 3,
+      "level": 1,
+      "skills": [
+        "letter-sounds",
+        "blending"
+      ],
+      "cover": "assets/images/cover-short-a.jpg",
+      "isNew": false,
+      "summary": "Tap the pink words in 'The cat sat on a mat.' to hear each sound.",
+      "payload": {
+        "tokens": [
+          {
+            "text": "The"
+          },
+          {
+            "text": "cat",
+            "audio": "assets/audio/words/cat.m4a",
+            "phonemes": [
+              {
+                "grapheme": "c",
+                "audio": "assets/audio/phonemes/c.m4a"
+              },
+              {
+                "grapheme": "a",
+                "audio": "assets/audio/phonemes/a.m4a"
+              },
+              {
+                "grapheme": "t",
+                "audio": "assets/audio/phonemes/t.m4a"
+              }
+            ]
+          },
+          {
+            "text": "sat",
+            "audio": "assets/audio/words/sat.m4a",
+            "phonemes": [
+              {
+                "grapheme": "s",
+                "audio": "assets/audio/phonemes/s.m4a"
+              },
+              {
+                "grapheme": "a",
+                "audio": "assets/audio/phonemes/a.m4a"
+              },
+              {
+                "grapheme": "t",
+                "audio": "assets/audio/phonemes/t.m4a"
+              }
+            ]
+          },
+          {
+            "text": "on"
+          },
+          {
+            "text": "a"
+          },
+          {
+            "text": "mat.",
+            "audio": "assets/audio/words/mat.m4a",
+            "phonemes": [
+              {
+                "grapheme": "m",
+                "audio": "assets/audio/phonemes/m.m4a"
+              },
+              {
+                "grapheme": "a",
+                "audio": "assets/audio/phonemes/a.m4a"
+              },
+              {
+                "grapheme": "t",
+                "audio": "assets/audio/phonemes/t.m4a"
+              }
+            ]
+          }
+        ],
+        "sentenceAudio": "assets/audio/sentences/tap-cat-sat.m4a",
+        "parentPrompt": "Point to each letter as you say it. Ask: what sound does a make?"
+      }
+    },
+    {
+      "id": "read-map-for-sam",
+      "type": "readAlong",
+      "title": "Read along: A Map for Sam",
+      "category": "reading",
+      "minutes": 4,
+      "level": 2,
+      "skills": [
+        "blending",
+        "sight-words"
+      ],
+      "cover": "assets/images/cover-map-for-sam.jpg",
+      "isNew": false,
+      "summary": "Listen, follow the glowing words, then read it back together.",
+      "payload": {
+        "audio": "assets/audio/passages/read-map-for-sam.m4a",
+        "durationMs": 11495,
+        "lines": [
+          {
+            "words": [
+              {
+                "text": "Sam",
+                "startMs": 0,
+                "endMs": 465
+              },
+              {
+                "text": "has",
+                "startMs": 605,
+                "endMs": 1016
+              },
+              {
+                "text": "a",
+                "startMs": 1156,
+                "endMs": 1475
+              },
+              {
+                "text": "map.",
+                "startMs": 1615,
+                "endMs": 1948
+              }
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "The",
+                "startMs": 2228,
+                "endMs": 2605
+              },
+              {
+                "text": "map",
+                "startMs": 2745,
+                "endMs": 3078
+              },
+              {
+                "text": "is",
+                "startMs": 3218,
+                "endMs": 3561
+              },
+              {
+                "text": "red.",
+                "startMs": 3701,
+                "endMs": 4007
+              }
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "Sam",
+                "startMs": 4287,
+                "endMs": 4752
+              },
+              {
+                "text": "and",
+                "startMs": 4892,
+                "endMs": 5256
+              },
+              {
+                "text": "Dad",
+                "startMs": 5396,
+                "endMs": 5730
+              },
+              {
+                "text": "go",
+                "startMs": 5870,
+                "endMs": 6233
+              },
+              {
+                "text": "to",
+                "startMs": 6373,
+                "endMs": 6719
+              },
+              {
+                "text": "the",
+                "startMs": 6859,
+                "endMs": 7236
+              },
+              {
+                "text": "big",
+                "startMs": 7376,
+                "endMs": 7684
+              },
+              {
+                "text": "tree.",
+                "startMs": 7824,
+                "endMs": 8171
+              }
+            ]
+          },
+          {
+            "words": [
+              {
+                "text": "Is",
+                "startMs": 8451,
+                "endMs": 8794
+              },
+              {
+                "text": "the",
+                "startMs": 8934,
+                "endMs": 9311
+              },
+              {
+                "text": "hat",
+                "startMs": 9451,
+                "endMs": 9754
+              },
+              {
+                "text": "in",
+                "startMs": 9894,
+                "endMs": 10211
+              },
+              {
+                "text": "the",
+                "startMs": 10351,
+                "endMs": 10728
+              },
+              {
+                "text": "tree?",
+                "startMs": 10868,
+                "endMs": 11215
+              }
+            ]
+          }
+        ],
+        "prompts": [
+          {
+            "afterLine": 1,
+            "text": "Pause here. Ask Maya: what color is the map?"
+          },
+          {
+            "afterLine": 3,
+            "text": "Pause here. Ask Maya: where do you think the hat is?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "story-pip-hat",
+      "type": "storybook",
+      "title": "Story time: Pip Finds a Hat",
+      "category": "stories",
+      "minutes": 5,
+      "level": 1,
+      "skills": [
+        "comprehension",
+        "sight-words"
+      ],
+      "cover": "assets/images/cover-pip-finds-a-hat.jpg",
+      "isNew": false,
+      "summary": "A curious puppy finds a little red hat. Practice short a and i words together.",
+      "payload": {
+        "wordsToListenFor": [
+          "hat",
+          "big",
+          "sit",
+          "red"
+        ],
+        "beforeYouRead": "Ask Maya what she thinks Pip will find.",
+        "pages": [
+          {
+            "image": "assets/images/cover-pip-finds-a-hat.jpg",
+            "text": "Pip is a little pup.",
+            "highlight": [
+              "pup"
+            ],
+            "coachTip": "Point to the word pup. Ask Maya what sound it starts with.",
+            "audio": "assets/audio/stories/story-pip-hat-1.m4a"
+          },
+          {
+            "image": "assets/images/cover-pip-small.jpg",
+            "text": "Pip can dig and dig.",
+            "highlight": [
+              "dig"
+            ],
+            "coachTip": "Dig is said twice. Let Maya read the second one.",
+            "audio": "assets/audio/stories/story-pip-hat-2.m4a"
+          },
+          {
+            "image": "assets/images/story-pip-page3.jpg",
+            "text": "Pip sees a red hat. Is it a big hat? No, it is a little hat!",
+            "highlight": [
+              "red",
+              "hat"
+            ],
+            "coachTip": "Point to the word hat. Ask Maya to find it again on this page.",
+            "audio": "assets/audio/stories/story-pip-hat-3.m4a"
+          },
+          {
+            "image": "assets/images/cover-pip-finds-a-hat.jpg",
+            "text": "Pip sits in the sun with his hat.",
+            "highlight": [
+              "sits",
+              "sun"
+            ],
+            "coachTip": "Sits and sun both start with s. Hiss it together: sss.",
+            "audio": "assets/audio/stories/story-pip-hat-4.m4a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rhyme-with-cat",
+      "type": "tapWords",
+      "title": "Rhyme with Cat",
+      "category": "rhymes",
+      "minutes": 3,
+      "level": 1,
+      "skills": [
+        "rhyming"
+      ],
+      "cover": "assets/images/cover-rhyme-cat.jpg",
+      "isNew": false,
+      "summary": "Tap the pink words in 'A cat, a hat, a bat, a mat!' to hear each sound.",
+      "payload": {
+        "tokens": [
+          {
+            "text": "A"
+          },
+          {
+            "text": "cat,",
+            "audio": "assets/audio/words/cat.m4a",
+            "phonemes": [
+              {
+                "grapheme": "c",
+                "audio": "assets/audio/phonemes/c.m4a"
+              },
+              {
+                "grapheme": "a",
+                "audio": "assets/audio/phonemes/a.m4a"
+              },
+              {
+                "grapheme": "t",
+                "audio": "assets/audio/phonemes/t.m4a"
+              }
+            ]
+          },
+          {
+            "text": "a"
+          },
+          {
+            "text": "hat,",
+            "audio": "assets/audio/words/hat.m4a",
+            "phonemes": [
+              {
+                "grapheme": "h",
+                "audio": "assets/audio/phonemes/h.m4a"
+              },
+              {
+                "grapheme": "a",
+                "audio": "assets/audio/phonemes/a.m4a"
+              },
+              {
+                "grapheme": "t",
+                "audio": "assets/audio/phonemes/t.m4a"
+              }
+            ]
+          },
+          {
+            "text": "a"
+          },
+          {
+            "text": "bat,",
+            "audio": "assets/audio/words/bat.m4a",
+            "phonemes": [
+              {
+                "grapheme": "b",
+                "audio": "assets/audio/phonemes/b.m4a"
+              },
+              {
+                "grapheme": "a",
+                "audio": "assets/audio/phonemes/a.m4a"
+              },
+              {
+                "grapheme": "t",
+                "audio": "assets/audio/phonemes/t.m4a"
+              }
+            ]
+          },
+          {
+            "text": "a"
+          },
+          {
+            "text": "mat!",
+            "audio": "assets/audio/words/mat.m4a",
+            "phonemes": [
+              {
+                "grapheme": "m",
+                "audio": "assets/audio/phonemes/m.m4a"
+              },
+              {
+                "grapheme": "a",
+                "audio": "assets/audio/phonemes/a.m4a"
+              },
+              {
+                "grapheme": "t",
+                "audio": "assets/audio/phonemes/t.m4a"
+              }
+            ]
+          }
+        ],
+        "sentenceAudio": "assets/audio/sentences/rhyme-with-cat.m4a",
+        "parentPrompt": "Clap once for every word that rhymes with cat."
+      }
+    },
+    {
+      "id": "story-big-red-bus",
+      "type": "storybook",
+      "title": "The Big Red Bus",
+      "category": "stories",
+      "minutes": 6,
+      "level": 1,
+      "skills": [
+        "comprehension",
+        "sight-words"
+      ],
+      "cover": "assets/images/cover-big-red-bus.jpg",
+      "isNew": true,
+      "summary": "A big red bus goes beep. A first story with short u and short i words.",
+      "payload": {
+        "wordsToListenFor": [
+          "bus",
+          "big",
+          "red"
+        ],
+        "beforeYouRead": "Ask Maya what she thinks Pip will find.",
+        "pages": [
+          {
+            "image": "assets/images/cover-big-red-bus.jpg",
+            "text": "The bus is big. The bus is red.",
+            "highlight": [
+              "bus",
+              "big"
+            ],
+            "coachTip": "Run a finger under each word as Maya reads.",
+            "audio": "assets/audio/stories/story-big-red-bus-1.m4a"
+          },
+          {
+            "image": "assets/images/cover-big-red-bus-2.jpg",
+            "text": "Beep beep! The bus can go.",
+            "highlight": [
+              "bus"
+            ],
+            "coachTip": "Make the beep sound together, then find the word bus.",
+            "audio": "assets/audio/stories/story-big-red-bus-2.m4a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "letter-m-walk",
+      "type": "letterSound",
+      "title": "Letter m Walk",
+      "category": "sounds",
+      "minutes": 2,
+      "level": 1,
+      "skills": [
+        "letter-sounds"
+      ],
+      "cover": "assets/images/cover-letter-m.jpg",
+      "isNew": false,
+      "summary": "Meet the letter m and the sound it makes.",
+      "payload": {
+        "letter": "m",
+        "letterAudio": "assets/audio/phonemes/m.m4a",
+        "words": [
+          {
+            "text": "map",
+            "audio": "assets/audio/words/map.m4a"
+          },
+          {
+            "text": "mat",
+            "audio": "assets/audio/words/mat.m4a"
+          },
+          {
+            "text": "mom",
+            "audio": "assets/audio/words/mom.m4a"
+          }
+        ],
+        "parentPrompt": "Ask Maya to spot things starting with m around your home."
+      }
+    },
+    {
+      "id": "short-a-sounds",
+      "type": "letterSound",
+      "title": "Short a Sounds",
+      "category": "sounds",
+      "minutes": 3,
+      "level": 1,
+      "skills": [
+        "letter-sounds"
+      ],
+      "cover": "assets/images/thumb-short-a.jpg",
+      "isNew": false,
+      "summary": "Meet the letter a and the sound it makes.",
+      "payload": {
+        "letter": "a",
+        "letterAudio": "assets/audio/phonemes/a.m4a",
+        "words": [
+          {
+            "text": "hat",
+            "audio": "assets/audio/words/hat.m4a"
+          },
+          {
+            "text": "bat",
+            "audio": "assets/audio/words/bat.m4a"
+          },
+          {
+            "text": "sat",
+            "audio": "assets/audio/words/sat.m4a"
+          }
+        ],
+        "parentPrompt": "Stretch the middle sound: h-aaa-t."
+      }
+    }
+  ],
+  "routines": {
+    "just-starting": [
+      "letter-short-a",
+      "tap-cat-sat",
+      "read-map-for-sam",
+      "story-pip-hat"
+    ],
+    "blending": [
+      "tap-cat-sat",
+      "rhyme-with-cat",
+      "read-map-for-sam",
+      "story-big-red-bus"
+    ],
+    "reading": [
+      "read-map-for-sam",
+      "story-pip-hat",
+      "story-big-red-bus",
+      "rhyme-with-cat"
+    ]
+  },
+  "achievements": [
+    {
+      "id": "first-story",
+      "title": "First Story",
+      "rule": {
+        "stories": 1
+      }
+    },
+    {
+      "id": "sound-explorer",
+      "title": "Sound Explorer",
+      "rule": {
+        "sounds": 3
+      }
+    },
+    {
+      "id": "streak-3",
+      "title": "3-Day Streak",
+      "rule": {
+        "streak": 3
+      }
+    },
+    {
+      "id": "words-25",
+      "title": "Word Collector",
+      "rule": {
+        "words": 25
+      }
+    },
+    {
+      "id": "bookworm",
+      "title": "Bookworm",
+      "rule": {
+        "stories": 5
+      }
+    },
+    {
+      "id": "rhyme-time",
+      "title": "Rhyme Time",
+      "rule": {
+        "rhymes": 1
+      }
+    },
+    {
+      "id": "early-bird",
+      "title": "Early Bird",
+      "rule": {
+        "minutes": 30
+      }
+    },
+    {
+      "id": "streak-10",
+      "title": "10-Day Streak",
+      "rule": {
+        "streak": 10
+      }
+    },
+    {
+      "id": "story-builder",
+      "title": "Story Builder",
+      "rule": {
+        "stories": 10
+      }
+    },
+    {
+      "id": "words-50",
+      "title": "50 Words",
+      "rule": {
+        "words": 50
+      }
+    },
+    {
+      "id": "read-aloud-star",
+      "title": "Read Aloud Star",
+      "rule": {
+        "minutes": 120
+      }
+    },
+    {
+      "id": "streak-30",
+      "title": "30-Day Streak",
+      "rule": {
+        "streak": 30
+      }
+    }
+  ]
+}
